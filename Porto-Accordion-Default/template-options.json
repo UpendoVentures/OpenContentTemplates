@@ -1,0 +1,7 @@
+{
+    "fields": {
+		"Layout": {
+			"removeDefaultNone":true
+		}
+    }
+}

@@ -1,0 +1,18 @@
+<div class="accordion" id="accordion-{{Context.ModuleId}}">
+    {{#each Items}}
+    <div class="card card-default">
+        <div class="card-header">
+            <h4 class="card-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse-{{../Context.ModuleId}}-{{@index}}">
+                    {{Title}} </a>
+            </h4>
+        </div>
+        <div id="collapse-{{../Context.ModuleId}}-{{@index}}" class="accordion-body collapse{{#if @first}} show{{/if}}">
+            <div class="card-body">
+                {{{Content}}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

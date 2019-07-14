@@ -12,6 +12,9 @@
           },
           "Content": {
             "type": "wysihtml"
+          },
+          "Icon": {
+            "type": "text"
           }
         }
       }

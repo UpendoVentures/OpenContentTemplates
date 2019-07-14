@@ -21,6 +21,13 @@
           "title": "Content",
           "fieldtype": "wysihtml",
           "advanced": false
+        },
+        {
+          "fieldname": "Icon",
+          "title": "Icon (optional)",
+          "fieldtype": "text",
+          "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>",
+          "advanced": false
         }
       ],
       "advanced": false

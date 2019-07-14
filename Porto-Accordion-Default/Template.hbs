@@ -1,9 +1,9 @@
-<div class="accordion" id="accordion">
+<div class="accordion" id="accordion-{{Context.ModuleId}}">
     {{#each Items}}
     <div class="card card-default">
         <div class="card-header">
             <h4 class="card-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{{../Context.ModuleId}}"
                     href="#collapse-{{../Context.ModuleId}}-{{@index}}">
                     {{Title}} </a>
             </h4>

@@ -1,0 +1,28 @@
+{
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "Content": {
+            "type": "wysihtml"
+          },
+          "Active": {
+            "type": "radio",
+            "optionLabels": [
+              "False",
+              "True"
+            ],
+            "removeDefaultNone": true
+          }
+        }
+      }
+    }
+  }
+}

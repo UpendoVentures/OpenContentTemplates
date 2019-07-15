@@ -1,0 +1,12 @@
+<div class="toggle{{Settings.Color}}{{Settings.Size}}{{Settings.Mode}}"
+    {{#equal Settings.OneOnly "true"}}data-plugin-options="{ 'isAccordion': true }"
+    {{/equal}}data-plugin-toggle="toggle" id="toggle-{{Context.ModuleId}}">
+    {{#each Items}}
+    <section class="toggle{{#equal Active "true"}} active{{/equal}}" id="toggle-{{../Context.ModuleId}}-{{@index}}">
+        <button class="toggle-heading" type="button">{{Title}}</button>
+        {{#equal ../Settings.Faq "false"}}<div class="toggle-content">{{/equal}}
+            {{{Content}}}
+            {{#equal ../Settings.Faq "false"}}</div>{{/equal}}
+    </section>
+    {{/each}}
+</div>

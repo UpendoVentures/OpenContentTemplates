@@ -2,6 +2,10 @@
 
 These are templates that we commonly use for various projects.
 
+## How To Use These Templates
+
+placeholder...
+
 ## Development
 
 You want to help build some templates? Sweet!  Here's how you can do it.

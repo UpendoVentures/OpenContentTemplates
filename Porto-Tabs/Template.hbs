@@ -1,0 +1,80 @@
+{{#equal Settings.TabMode "navigation"}}
+<div class="row" id="tabs-{{Context.ModuleId}}">
+    <div class="col-md-4">
+        <div class="tabs tabs-vertical tabs-left tabs-navigation{{Settings.Color}}">
+            <ul class="nav nav-tabs col-sm-3">
+                {{#each Items}}
+                <li class="nav-item{{#if @first}} active{{/if}}">
+                    <a href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab" {{#if @first}} class="" {{else}}
+                        class="nav-link" {{/if}}>{{#if Icon }}<em class="{{Icon}}"></em>
+                        {{/if}}{{Title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-8">
+        {{#each Items}}
+        <div class="tab-pane tab-pane-navigation{{#if @first}} active{{/if}}"
+            id="tab-{{../Context.ModuleId}}-{{@index}}">
+            {{{Content}}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{else}}
+<div id="tabs-{{Context.ModuleId}}"
+    class="tabs{{#equal Settings.TabPosition "vertical"}} tabs-vertical tabs-left{{/equal}}{{#equal Settings.TabPosition "bottom"}} tabs-bottom{{/equal}}{{Settings.Color}}{{#equal Settings.TabMode "simple"}} tabs-bottom tabs-simple{{/equal}}">
+    {{#equal Settings.TabPosition "top"}}
+    <!-- top tabs layout -->
+    <ul
+        class="nav nav-tabs{{#equal Settings.TabAlignment "right"}} justify-content-end{{/equal}}{{#equal Settings.TabAlignment "centered"}} justify-content-center{{/equal}}{{#equal Settings.TabAlignment "justified"}} nav-justified flex-column flex-md-row{{/equal}}{{#equal Settings.TabPosition "vertical"}} col-sm-3{{/equal}}{{#equal Settings.TabMode "simple"}} justify-content-center{{#equal Settings.TabIconMode "bigicons"}} center{{/equal}}{{/equal}}">
+        {{#each Items}}
+        <li
+            class="{{#equal @root.Settings.TabAlignment "justified"}}text-center {{/equal}}nav-item{{#if @first}} active{{/if}}">
+            <a class="nav-link" href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab">
+                {{#equal @root.Settings.TabMode "simple"}}
+                {{#equal @root.Settings.TabIconMode "bigicons"}}
+                <div class="featured-boxes featured-boxes-style-6 p-none m-none">
+                    <div class="featured-box featured-box-primary featured-box-effect-6 p-none m-none">
+                        <span class="box-content p-none m-none">
+                            {{#if Icon }}<em class="icon-featured {{Icon}}"></em>{{/if}}
+                        </span>
+                    </div>
+                </div>
+                <p class="mb-none pb-none">{{Title}}</p>
+                {{/equal}}
+                {{/equal}}
+                {{#equal @root.Settings.TabMode "standard"}}
+                {{#if Icon }}<i class="{{Icon}}"></i> {{/if}}{{Title}}
+                {{/equal}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/equal}}
+    <div class="tab-content">
+        {{#each Items}}
+        <div id="tab-{{../Context.ModuleId}}-{{@index}}" class="tab-pane{{#if @first}} active{{/if}}">
+            {{#equal ../Settings.TabMode "simple"}}<div class="center">{{/equal}}
+                {{{Content}}}
+                {{#equal ../Settings.TabMode "simple"}}</div>{{/equal}}
+        </div>
+        {{/each}}
+    </div>
+    {{#equal Settings.TabPosition "bottom"}}
+    <!-- bottom tabs layout -->
+    <ul
+        class="nav nav-tabs{{#equal Settings.TabAlignment "right"}} justify-content-end{{/equal}}{{#equal Settings.TabAlignment "centered"}} justify-content-center{{/equal}}{{#equal Settings.TabAlignment "justified"}} nav-justified flex-column flex-md-row{{/equal}}{{#equal Settings.TabPosition "vertical"}} col-sm-3{{/equal}}">
+        {{#each Items}}
+        <li
+            class="{{#equal ../Settings.TabAlignment "justified"}}text-center {{/equal}}nav-item{{#if @first}} active{{/if}}">
+            <a class="nav-link" href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab">
+                {{#if Icon }}<i class="{{Icon}}"></i> {{/if}}{{Title}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/equal}}
+</div>
+{{/equal}}

@@ -5,10 +5,10 @@
 				"item": {
 					"fields": {
 						"FrontDescription": {
-							"label": "Content au recto",
+							"label": "Content au recto"
 						},
 						"BackDescription": {
-							"label": "Content au verso",
+							"label": "Content au verso"
 						}
 					}
 				}

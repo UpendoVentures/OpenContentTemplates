@@ -6,7 +6,7 @@
             <h4 class="card-title">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{{../Context.ModuleId}}"
                     href="#collapse-{{../Context.ModuleId}}-{{@index}}">
-                    {{#if Icon }}<i class="{{Icon}}"></i>{{/if}} {{Title}} </a>
+                    {{#if Icon }}<span class="{{Icon}}"></span>{{/if}} {{Title}} </a>
             </h4>
         </div>
         <div id="collapse-{{../Context.ModuleId}}-{{@index}}" class="accordion-body collapse{{#if @first}} show{{/if}}">

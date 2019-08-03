@@ -6,7 +6,7 @@
                 {{#each Items}}
                 <li class="nav-item{{#if @first}} active{{/if}}">
                     <a href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab" {{#if @first}} class="" {{else}}
-                        class="nav-link" {{/if}}>{{#if Icon }}<em class="{{Icon}}"></em>
+                        class="nav-link" {{/if}}>{{#if Icon }}<span class="{{Icon}}"></span>
                         {{/if}}{{Title}}</a>
                 </li>
                 {{/each}}
@@ -38,7 +38,7 @@
                 <div class="featured-boxes featured-boxes-style-6 p-none m-none">
                     <div class="featured-box featured-box-primary featured-box-effect-6 p-none m-none">
                         <span class="box-content p-none m-none">
-                            {{#if Icon }}<em class="icon-featured {{Icon}}"></em>{{/if}}
+                            {{#if Icon }}<span class="icon-featured {{Icon}}"></span>{{/if}}
                         </span>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 {{/equal}}
                 {{/equal}}
                 {{#equal @root.Settings.TabMode "standard"}}
-                {{#if Icon }}<i class="{{Icon}}"></i> {{/if}}{{Title}}
+                {{#if Icon }}<span class="{{Icon}}"></span> {{/if}}{{Title}}
                 {{/equal}}
             </a>
         </li>
@@ -70,7 +70,7 @@
         <li
             class="{{#equal ../Settings.TabAlignment "justified"}}text-center {{/equal}}nav-item{{#if @first}} active{{/if}}">
             <a class="nav-link" href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab">
-                {{#if Icon }}<i class="{{Icon}}"></i> {{/if}}{{Title}}
+                {{#if Icon }}<span class="{{Icon}}"></span> {{/if}}{{Title}}
             </a>
         </li>
         {{/each}}

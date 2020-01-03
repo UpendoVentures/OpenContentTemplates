@@ -1,6 +1,8 @@
-# OpenContentTemplates
+# OpenContentTemplates for OpenContent on DNN
 
 These are templates that we commonly use for various projects.
+
+Learn more about DNN CMS at [the official DNN community website](https://dncommunity.org).
 
 ## How To Use These Templates
 

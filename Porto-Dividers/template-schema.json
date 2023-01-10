@@ -1,0 +1,98 @@
+{
+    "type": "object",
+    "properties": {  
+        "DividerWithIcon": {    
+            "title": "Divider with Icon",
+            "type": "boolean"        
+        },
+        "IconsSizes": {
+            "title": "Icons Sizes",
+            "type": "string",
+            "enum": [
+                "divider-icon-sm",
+                "",
+                "divider-icon-lg"
+            ]
+        },
+        "IconsPosition": {
+            "title": "Icons Position",
+            "type": "string",
+            "enum": [
+                "",
+                "divider-left",
+                "divider-right"
+            ]
+        },      
+        "Spacements": {
+            "title": "Spacements",
+            "type": "string",
+            "enum": [
+                "short",
+				"tall",
+				"taller"
+            ]
+        },
+        "PatternStyle": {
+            "title": "Pattern Style",
+            "type": "string",
+            "enum": [
+                "solid",
+				"dashed",
+				"pattern",
+                "pattern pattern-2"
+            ]
+        },
+        "Color": {
+            "title": "Color",
+            "type": "string",
+            "enum": [
+                "",
+				"divider-primary",
+				"divider-secondary",
+				"divider-tertiary",
+				"divider-quaternary"
+            ]
+        },
+        "DividerStyle": {
+            "title": "Divider Style",
+            "type": "string",
+            "enum": [
+                "",
+				"divider-style-2",
+				"divider-style-3",
+				"divider-style-4"
+            ]
+        },
+        "EnableAnimations": {    
+            "title": "Enable Animations",
+            "type": "boolean"        
+        },
+        "AnimationType": {
+            "title": "Animation Type",
+            "type": "string",
+            "enum": [
+                "bounceIn"
+            ]
+        },
+        "AnimationDelay": {
+            "title": "Animation Delay",
+            "type": "string",
+            "enum": [
+                "0",
+                "300",
+                "600",
+                "900",
+                "1200"
+            ]
+        }
+    },
+    "dependencies": {        
+        "Color": ["DividerWithIcon"],
+        "DividerStyle": ["DividerWithIcon"],
+        "IconsSizes": ["DividerWithIcon"],
+        "IconsPosition": ["DividerWithIcon"],
+        "EnableAnimations": ["DividerWithIcon"],
+        "AnimationType": ["EnableAnimations"],
+        "AnimationDelay": ["EnableAnimations"]
+    }
+}

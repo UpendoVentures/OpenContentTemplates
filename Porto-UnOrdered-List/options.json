@@ -1,0 +1,30 @@
+{
+    "fields": {
+      "ModuleTitle": {
+        "type": "text"
+      },
+      "Items": {
+        "type": "array",
+        "items": {
+            "ListItemText": {
+              "type": "wysihtml"
+            },
+            "Icon": {
+              "type": "text"
+            },
+            "SecondLevelItems": 
+            {
+              "type": "array",
+              "items": {
+                "SecondLevelListItemText": {
+                  "type": "wysihtml"
+                },
+                "SecondLevelListItemIcon": {
+                  "type": "text"
+                }
+              }
+            }  
+         }
+      }
+    }  
+  }

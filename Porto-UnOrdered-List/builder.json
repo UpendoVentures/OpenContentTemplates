@@ -1,0 +1,65 @@
+{
+    "formfields": [
+    {
+      "fieldname": "ModuleTitle",
+      "title": "Module Title",
+      "fieldtype": "text",
+      "advanced": false
+    },
+    {
+      "fieldname": "Items",
+      "fieldtype": "array",
+      "subfields": [
+        {
+          "fieldname": "ListItemText",
+          "title": "List Item Text (required)",
+          "fieldtype": "wysihtml",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "multilanguage": false,
+          "index": false,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Icon",
+          "title": "Icon (optional)",
+          "fieldtype": "text",
+          "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>",
+          "advanced": false
+        },
+        {
+          "fieldname": "SecondLevelItems",
+          "fieldtype": "array",
+          "subfields": [
+            {
+              "fieldname": "SecondLevelListItemText",
+              "title": "List Item Text (required)",
+              "fieldtype": "wysihtml",
+              "advanced": true,
+              "required": true,
+              "hidden": false,
+              "multilanguage": false,
+              "index": false,
+              "position": "1col1",
+              "dependencies": []
+            },
+            {
+              "fieldname": "SecondLevelListItemIcon",
+              "title": "Icon (optional)",
+              "fieldtype": "text",
+              "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>",
+              "advanced": false
+            }      
+          ],
+          "advanced": false
+        }
+  
+      ],
+      "advanced": false
+     }
+    ],
+    "formtype": "object"
+  }
+  

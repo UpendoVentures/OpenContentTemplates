@@ -1,0 +1,18 @@
+<ul class="list list-icons {{Settings.IconsColor}} {{Settings.ListBorder}} {{Settings.IconStyle}} {{Settings.IconsSizes}} {{ Settings.IconsPosition}}">
+    {{#each Items}}
+    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}" data-appear-animation-delay="{{@root.Settings.AnimationSpeed}}"{{/if}}>
+        {{#if Icon}}<em class="{{Icon}}"></em>{{/if}} {{ListItemText}}
+        
+        {{#if SecondLevelListItems}}
+            <ul class="list list-icons {{@root.Settings.IconsColor}} {{@root.Settings.ListBorder}} {{@root.Settings.IconStyle}} {{@root.Settings.IconsSizes}} {{ @root.Settings.IconsPosition}}">
+                {{#each SecondLevelListItems}}
+                    <li>
+                        {{#if SecondLevelListItemIcon}}<em class="{{SecondLevelListItemIcon}}"></em>{{/if}} {{SecondLevelListItemText}}
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+        
+    </li>    
+    {{/each}}
+</ul>   

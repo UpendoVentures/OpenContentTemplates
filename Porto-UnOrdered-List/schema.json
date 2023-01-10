@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+      "ModuleTitle": {
+        "type": "string",
+        "title": "Module Title"
+      },
+      "Items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "ListItemText": {
+              "type": "string",
+              "title": "List Item Text (required)",
+              "required": true
+            },
+            "Icon": {
+              "type": "string",
+              "title": "Icon (optional) - Example: fab fa-android",
+              "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>"
+            },
+            "SecondLevelListItems":{
+              "type": "array",
+               "items": {
+                "type": "object",
+                "properties": {
+                  "SecondLevelListItemText": {
+                    "type": "string",
+                    "title": "List Item Text (required)",
+                    "required": true
+                  },
+                  "SecondLevelListItemIcon": {
+                    "type": "string",
+                    "title": "Icon (optional) - Example: fab fa-android",
+                    "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>"
+                  }
+                }
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+  

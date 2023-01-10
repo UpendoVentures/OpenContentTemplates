@@ -1,0 +1,115 @@
+{
+	"fields": {		
+		"DividerWithIcon": {
+			"label": "Divider with Icon",
+			"type": "checkbox",
+			"removeDefaultNone": true
+		},
+		"IconsSizes": {
+			"title": "Icons Sizes",
+			"type": "select",
+			"optionLabels": [
+				"Small",				
+				"Normal",
+				"Large"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},
+		"IconsPosition": {
+			"title": "Icons Position",
+			"type": "select",
+			"optionLabels": [
+				"Center",				
+				"Left",
+				"Right"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},
+		"Spacements": {
+			"title": "Spacements",
+			"type": "select",
+			"optionLabels": [
+				"Short",
+				"Tall",
+				"Taller"
+			]
+		},
+		"PatternStyle": {
+			"title": "Pattern Style",
+			"type": "select",
+			"optionLabels": [
+				"Solid",
+				"Dashed",
+				"Pattern",
+				"Pattern 2"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": false
+            }
+		},		
+		"Color": {
+			"title": "Color",
+			"type": "select",
+			"optionLabels": [
+				"None",
+				"Primary",
+				"Secondary",
+				"Tertiary",
+				"quaternary"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},		
+		"DividerStyle": {
+			"title": "Divider Style",
+			"type": "select",
+			"optionLabels": [
+				"Style 1",
+				"Style 2",
+				"Style 3",
+				"Style 4"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},
+		"EnableAnimations": {
+			"label": "Enable Animations",
+			"type": "checkbox",
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},
+		"AnimationType": {
+			"title": "Animation Type",
+			"type": "select",
+			"optionLabels": [
+				"Bounce In"
+			],
+			"removeDefaultNone": true
+		},
+		"AnimationDelay": {
+			"title": "Animation Delay",
+			"type": "select",
+			"optionLabels": [
+				"0ms",
+				"300ms",				
+				"600ms",
+				"900ms",
+				"1200ms"
+			],
+			"removeDefaultNone": true
+		}
+	}
+}

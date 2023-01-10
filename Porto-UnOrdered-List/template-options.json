@@ -64,8 +64,8 @@
 			],
 			"removeDefaultNone": true
 		},
-		"AnimationSpeed": {
-			"title": "Animation Speed",
+		"AnimationDelay": {
+			"title": "Animation Delay",
 			"type": "select",
 			"optionLabels": [
 				"0ms",

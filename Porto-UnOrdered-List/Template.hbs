@@ -1,6 +1,6 @@
 <ul class="list list-icons {{Settings.IconsColor}} {{Settings.ListBorder}} {{Settings.IconStyle}} {{Settings.IconsSizes}} {{ Settings.IconsPosition}}">
     {{#each Items}}
-    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}" data-appear-animation-delay="{{@root.Settings.AnimationSpeed}}"{{/if}}>
+    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}" data-appear-animation-delay="{{@root.Settings.AnimationDelay}}"{{/if}}>
         {{#if Icon}}<em class="{{Icon}}"></em>{{/if}} {{ListItemText}}
         
         {{#if SecondLevelListItems}}

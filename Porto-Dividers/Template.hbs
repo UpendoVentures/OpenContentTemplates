@@ -1,0 +1,17 @@
+{{#if Settings.DividerWithIcon}}
+<div class="divider 
+    {{Settings.PatternStyle}}
+    {{Settings.DividerStyle}}
+    {{Settings.Color}}
+    {{Settings.IconsSizes}}
+    {{Settings.Spacements}}
+    {{Settings.IconsPosition}}"
+    {{#if Settings.EnableAnimations}}
+    data-appear-animation="{{Settings.AnimationType}}" data-appear-animation-delay="{{Settings.AnimationDelay}}"    
+    {{/if}}
+>
+    <em class="{{Icon}}"></em>
+</div>
+{{else}}
+<hr class="{{Settings.PatternStyle}} {{Settings.Spacements}}" />
+{{/if}}

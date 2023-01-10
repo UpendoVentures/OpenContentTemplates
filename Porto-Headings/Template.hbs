@@ -1,0 +1,15 @@
+
+{{#if Settings.EnableHeadingBorder }}
+<div class="heading {{Settings.BorderColor}} heading-border {{Settings.BorderStyle}} {{Settings.BorderSize}}">
+{{/if}}
+
+<{{Settings.HeadingType}} class="{{#if SubHeading }}mb-none {{/if}} {{Settings.Uppercase}} {{Settings.HeadingColor}}">{{Heading}}</{{Settings.HeadingType}}>
+
+{{#if SubHeading }}
+<p class="mb-xlg">{{SubHeading}}</p>
+{{/if }}
+
+
+{{#if Settings.EnableHeadingBorder }}
+</div>
+{{/if}}

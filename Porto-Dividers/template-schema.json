@@ -22,6 +22,10 @@
                 "divider-left",
                 "divider-right"
             ]
+        },
+        "FullWith": {    
+            "title": "Divider Full With",
+            "type": "boolean"        
         },      
         "Spacements": {
             "title": "Spacements",
@@ -91,6 +95,7 @@
         "DividerStyle": ["DividerWithIcon"],
         "IconsSizes": ["DividerWithIcon"],
         "IconsPosition": ["DividerWithIcon"],
+        "FullWith": ["DividerWithIcon"],
         "EnableAnimations": ["DividerWithIcon"],
         "AnimationType": ["EnableAnimations"],
         "AnimationDelay": ["EnableAnimations"]

@@ -31,6 +31,14 @@
                 "DividerWithIcon": true
             }
 		},
+		"FullWith": {
+			"label": "Divider Full With",
+			"type": "checkbox",
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerWithIcon": true
+            }
+		},
 		"Spacements": {
 			"title": "Spacements",
 			"type": "select",

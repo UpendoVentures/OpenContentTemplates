@@ -1,0 +1,20 @@
+{{#each Items}}
+<div class="row">
+<div class="{{ColMdTopText}}">
+<p>
+   {{TopText}}
+</p>
+</div>
+<div class="{{ColMdContent}}">
+<blockquote class="{{Color}} {{../Settings.Reverse}} {{../Settings.Borders}}  {{Align}}">
+    <p>
+       {{{Content}}}
+    </p>
+    <footer>{{FooterText1}}<cite title="Source Title">{{FooterText2}}</cite></footer>
+</blockquote>
+</div>
+<p>
+   {{BottomText}}
+</p>
+</div>
+{{/each}}

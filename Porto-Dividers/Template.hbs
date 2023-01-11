@@ -1,0 +1,23 @@
+{{#equal Settings.DividerType "Divider with Icon"}}
+<div class="divider {{#if Settings.FullWith}}divider-solid{{/if}}
+    {{Settings.PatternStyle}}
+    {{Settings.DividerStyle}}
+    {{Settings.Color}}
+    {{Settings.IconsSizes}}
+    {{Settings.Spacements}}
+    {{Settings.IconsPosition}}"
+    {{#if Settings.EnableAnimations}}
+    data-appear-animation="{{Settings.AnimationType}}" data-appear-animation-delay="{{Settings.AnimationDelay}}"    
+    {{/if}}
+>
+    <em class="{{Icon}}"></em>
+</div>
+{{else}}
+    {{#equal Settings.DividerType "Classic"}}
+        <hr class="{{Settings.PatternStyle}} {{Settings.Spacements}}" />
+    {{else}}
+        <div class="divider divider-small {{Settings.Color}} {{Settings.DividerSmallLocation}} {{Settings.DividerSmallSize}} {{Settings.Spacements}}">
+                    <hr />
+        </div>
+    {{/equal}}
+{{/equal}}

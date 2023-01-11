@@ -52,14 +52,14 @@
             "type": "boolean"        
         },
         "AnimationType": {
-            "title": "Icons Sizes",
+            "title": "Animation Type",
             "type": "string",
             "enum": [
                 "fadeInUp"
             ]
         },
-        "AnimationSpeed": {
-            "title": "Icons Sizes",
+        "AnimationDelay": {
+            "title": "Animation Delay",
             "type": "string",
             "enum": [
                 "0",

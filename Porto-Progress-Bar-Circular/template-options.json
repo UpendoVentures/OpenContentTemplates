@@ -1,8 +1,35 @@
 {
-    "Size": 175, 
-    "lineWidth": 10,
-    "barColor": "0088CC",
-    "lineCap": "square",
-    "scaleColor": "999",
-    "trackColor": "CCC"
+	"fields": {	
+		"Size": {
+			"label": "Progress Bar Size",
+			"type": "text",
+			"removeDefaultNone": true
+		},
+        "lineWidth": {
+			"label": "Progress Bar LineWith",
+			"type": "text",
+			"removeDefaultNone": true
+		},
+        "barColor": {
+			"label": "Progress Bar Bar Color",
+			"type": "text",
+			"removeDefaultNone": true
+		},
+        "lineCap": {
+			"label": "Progress Bar line Cap",
+			"type": "text",
+			"removeDefaultNone": true
+		},
+        "scaleColor": {
+			"label": "Progress Bar Scale Color",
+			"type": "text",
+			"removeDefaultNone": true
+		},
+        "trackColor": {
+			"label": "Progress Bar Track Color",
+			"type": "text",
+			"removeDefaultNone": true
+		}
+
+    }
 }

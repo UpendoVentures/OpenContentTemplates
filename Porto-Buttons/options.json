@@ -1,0 +1,10 @@
+{
+  "fields": {
+    "Button": {
+      "type": "wysihtml"
+    },
+    "Icon": {
+      "type": "text"
+    }
+  }
+}

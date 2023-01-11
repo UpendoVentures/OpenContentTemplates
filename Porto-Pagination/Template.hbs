@@ -1,0 +1,17 @@
+<ul class="{{Settings.ButtonSize}}">
+	<li class="page-item">
+		<a class="page-link" href="#">
+			<em class="fas fa-angle-double-left"></em>
+			<span class="btn-text-indent">Previous</span>
+		</a>
+	</li>
+	 {{#each Items}}
+	<li class="page-item {{#if Active}}active{{/if}}"><a class="page-link" href="#"> {{ListItemNumber}}</a></li>
+	 {{/each}}
+	<li class="page-item">
+		<a class="page-link" href="#">
+			<em class="fas fa-angle-double-right"></em>
+			<span class="btn-text-indent">Next</span>
+		</a>
+	</li>
+</ul>

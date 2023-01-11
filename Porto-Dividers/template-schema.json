@@ -1,9 +1,16 @@
 {
     "type": "object",
     "properties": {  
-        "DividerWithIcon": {    
-            "title": "Divider with Icon",
-            "type": "boolean"        
+        "DividerType": {
+            "title": "Divider Type",
+            "type": "string",
+            "enum": [
+                "Classic",
+                "Divider with Icon",
+                "Small"
+            ],
+            "default": "Classic",
+            "required": true
         },
         "IconsSizes": {
             "title": "Icons Sizes",
@@ -12,7 +19,28 @@
                 "divider-icon-sm",
                 "",
                 "divider-icon-lg"
-            ]
+            ],
+            "default": ""
+        },
+        "DividerSmallLocation": {
+            "title": "Small Divider Location",
+            "type": "string",
+            "enum": [
+                "",
+                "divider-small-center",
+                "divider-small-right"
+            ],
+            "default": ""
+        },
+        "DividerSmallSize": {
+            "title": "Small Divider Size",
+            "type": "string",
+            "enum": [
+                "divider-small-sm",
+                "",
+                "divider-small-lg"
+            ],
+            "default": ""
         },
         "IconsPosition": {
             "title": "Icons Position",
@@ -21,7 +49,8 @@
                 "",
                 "divider-left",
                 "divider-right"
-            ]
+            ],
+            "default": ""
         },
         "FullWith": {    
             "title": "Divider Full With",
@@ -34,7 +63,8 @@
                 "short",
 				"tall",
 				"taller"
-            ]
+            ],
+            "default": "short"
         },
         "PatternStyle": {
             "title": "Pattern Style",
@@ -44,7 +74,8 @@
 				"dashed",
 				"pattern",
                 "pattern pattern-2"
-            ]
+            ],
+            "default": "solid"
         },
         "Color": {
             "title": "Color",
@@ -55,7 +86,8 @@
 				"divider-secondary",
 				"divider-tertiary",
 				"divider-quaternary"
-            ]
+            ],
+            "default": ""
         },
         "DividerStyle": {
             "title": "Divider Style",
@@ -65,7 +97,8 @@
 				"divider-style-2",
 				"divider-style-3",
 				"divider-style-4"
-            ]
+            ],
+            "default": ""
         },
         "EnableAnimations": {    
             "title": "Enable Animations",
@@ -87,16 +120,20 @@
                 "600",
                 "900",
                 "1200"
-            ]
+            ],
+            "default": "300"
         }
     },
     "dependencies": {        
-        "Color": ["DividerWithIcon"],
-        "DividerStyle": ["DividerWithIcon"],
-        "IconsSizes": ["DividerWithIcon"],
-        "IconsPosition": ["DividerWithIcon"],
-        "FullWith": ["DividerWithIcon"],
-        "EnableAnimations": ["DividerWithIcon"],
+        "PatternStyle": ["DividerType"],
+        "Color": ["DividerType"],
+        "DividerStyle": ["DividerType"],
+        "IconsSizes": ["DividerType"],
+        "DividerSmallLocation": ["DividerType"],
+        "DividerSmallSize": ["DividerType"],
+        "IconsPosition": ["DividerType"],
+        "FullWith": ["DividerType"],
+        "EnableAnimations": ["DividerType"],
         "AnimationType": ["EnableAnimations"],
         "AnimationDelay": ["EnableAnimations"]
     }

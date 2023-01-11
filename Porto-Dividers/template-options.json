@@ -1,10 +1,5 @@
 {
 	"fields": {		
-		"DividerWithIcon": {
-			"label": "Divider with Icon",
-			"type": "checkbox",
-			"removeDefaultNone": true
-		},
 		"IconsSizes": {
 			"title": "Icons Sizes",
 			"type": "select",
@@ -15,7 +10,34 @@
 			],
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": "Divider with Icon"
+            }
+			
+		},
+		"DividerSmallLocation": {
+			"title": "Small Divider Location",
+			"type": "select",
+			"optionLabels": [
+				"Left",				
+				"Center",
+				"Right"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerType": "Small"
+            }
+		},
+		"DividerSmallSize": {
+			"title": "Small Divider Size",
+			"type": "select",
+			"optionLabels": [
+				"Small",				
+				"Classic",
+				"Large"
+			],
+			"removeDefaultNone": true,
+            "dependencies": {
+                "DividerType": "Small"
             }
 		},
 		"IconsPosition": {
@@ -28,7 +50,7 @@
 			],
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": "Divider with Icon"
             }
 		},
 		"FullWith": {
@@ -36,7 +58,7 @@
 			"type": "checkbox",
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": "Divider with Icon"
             }
 		},
 		"Spacements": {
@@ -58,8 +80,8 @@
 				"Pattern 2"
 			],
 			"removeDefaultNone": true,
-            "dependencies": {
-                "DividerWithIcon": false
+			"dependencies": {
+                "DividerType": ["Divider with Icon", "Classic"]
             }
 		},		
 		"Color": {
@@ -74,7 +96,7 @@
 			],
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": ["Divider with Icon", "Small"]
             }
 		},		
 		"DividerStyle": {
@@ -88,7 +110,7 @@
 			],
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": "Divider with Icon"
             }
 		},
 		"EnableAnimations": {
@@ -96,7 +118,7 @@
 			"type": "checkbox",
 			"removeDefaultNone": true,
             "dependencies": {
-                "DividerWithIcon": true
+                "DividerType": "Divider with Icon"
             }
 		},
 		"AnimationType": {

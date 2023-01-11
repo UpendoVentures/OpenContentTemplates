@@ -1,7 +1,8 @@
 {
-    "DividerWithIcon": false,
+    "DividerType": "Classic",
     "IconsSizes": "",
     "IconsPosition": "",
+    "DividerSmallLocation": "",
     "FullWith": false,
     "Spacements": "short",
     "Styles": "solid",

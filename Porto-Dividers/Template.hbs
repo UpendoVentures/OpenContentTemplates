@@ -1,4 +1,4 @@
-{{#if Settings.DividerWithIcon}}
+{{#equal Settings.DividerType "Divider with Icon"}}
 <div class="divider {{#if Settings.FullWith}}divider-solid{{/if}}
     {{Settings.PatternStyle}}
     {{Settings.DividerStyle}}
@@ -13,5 +13,11 @@
     <em class="{{Icon}}"></em>
 </div>
 {{else}}
-<hr class="{{Settings.PatternStyle}} {{Settings.Spacements}}" />
-{{/if}}
+    {{#equal Settings.DividerType "Classic"}}
+        <hr class="{{Settings.PatternStyle}} {{Settings.Spacements}}" />
+    {{else}}
+        <div class="divider divider-small {{Settings.Color}} {{Settings.DividerSmallLocation}} {{Settings.DividerSmallSize}} {{Settings.Spacements}}">
+                    <hr />
+        </div>
+    {{/equal}}
+{{/equal}}

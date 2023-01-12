@@ -1,0 +1,40 @@
+<div class="alert {{Settings.Color}} {{Settings.Size}}">
+  {{#if Settings.Dismissible}}
+    <button
+      aria-label="Close"
+      class="close btn-dark"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  {{/if}}
+  <div class="dark" style="font-size: x-large;padding-bottom: inherit;">
+    {{Title}}
+  </div>
+  {{#if Settings.ShowIcon}}
+    <div class="row" style="padding-bottom: inherit;">
+      <div class="col-md-1">
+        <em class="fas fa-thumbs-up m-auto" style="font-size: x-large;"></em>
+      </div>
+      <div class="col-md-11 dark">
+        {{Content}}
+      </div>
+    </div>
+  {{else}}
+    <div class="dark" style="font-size: x-large;padding-bottom: inherit;">
+      {{Content}}
+    </div>
+  {{/if}}
+
+  {{#if Settings.ShowBtn}}
+    <button
+      class="btn btn-info mt-xs mb-xs mr-xs"
+      type="button"
+    >{{btn1Text}}</button>
+    <button
+      class="btn btn-default mt-xs mb-xs"
+      type="button"
+    >{{btn2Text}}</button>
+  {{/if}}
+</div>

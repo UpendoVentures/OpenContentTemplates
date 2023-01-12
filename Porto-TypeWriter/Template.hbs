@@ -1,0 +1,76 @@
+{{#equal Settings.TypeWriterStyle "Default"}}
+<section class="section section-default-scale-9 center">
+	<div class="container">
+		<span class="text-light type-text-sm">{{Heading}}</span>
+		<div class="type-writer {{Settings.TextColor}} type-text-sm" data-plugin-options="{'stringsElement': '#typed-strings', 'loop': true}">
+			<div id="typed-strings">
+            <p>{{Text1}}</p>
+			<p>{{Text2}}</p>
+			<p>{{Text3}}</p>
+			</div>
+			<span id="typed"></span>
+		</div>
+	</div>
+</section>
+{{/equal }}
+
+
+{{#equal Settings.TypeWriterStyle "Colors"}}
+<div class="center">
+	<span class="type-text-sm">{{Heading}}</span>
+	<div class="type-writer {{Settings.TextColor}} type-text-sm" data-plugin-options="{'stringsElement': '#typed-strings6', 'loop': true}">
+		<div id="typed-strings6">
+			<p>{{Text1}}</p>
+			<p>{{Text2}}</p>
+			<p>{{Text3}}</p>
+		</div>
+		<span id="typed6"></span>
+	</div>
+</div>
+{{/equal }}
+
+{{#equal Settings.TypeWriterStyle "Fade Out"}}
+<section class="parallax section section-text-light section-parallax section-center" data-image-src="{{Image}}" data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax">
+	<div class="container">
+		<div class="type-writer type-text-lg {{Settings.TextColor}}" data-plugin-options="{'stringsElement': '#typed-strings4', 'fadeOut': true, 'loop': true}">
+			<div id="typed-strings4">
+			   <p>{{Text1}}</p>
+		       <p>{{Text2}}</p>
+			   <p>{{Text3}}</p>
+			</div>
+			<span id="typed4"> </span>
+		</div>
+	</div>
+</section>
+{{/equal }}
+
+{{#equal Settings.TypeWriterStyle "In an input"}}
+<section data-image-src="{{Image}}" class="parallax section section-text-light section-parallax section-center" data-plugin-options="{'speed': 0.5}" data-plugin-parallax="parallax">
+	<div class="container">
+		<div class="type-writer pt-lg pb-lg col-md-offset-4" data-plugin-options="{'stringsElement': '#typed-strings2', 'loop': true, 'attr': 'placeholder', 'bindInputFocusEvents': true}">
+			<div id="typed-strings2">
+			   <p>{{Text1}}</p>
+		       <p>{{Text2}}</p>
+			   <p>{{Text3}}</p>
+			</div>
+			<label class="sr-only" for="typers">{{Heading}}</label>
+			<input id="typers" name="typers" type="text" class="type-input form-control" />
+		</div>
+	</div>
+</section>
+{{/equal }}
+
+{{#equal Settings.TypeWriterStyle "Shuffled"}}
+<section data-image-src="{{Image}}" data-plugin-options="{'speed': 0.5}" data-plugin-parallax="parallax" class="parallax section section-text-light section-parallax section-center">
+	<div class="container">
+		<div class="type-writer text-light type-text-sm pt-lg pb-lg" data-plugin-options="{'stringsElement': '#typed-strings3', 'shuffle': true, 'cursorChar': '_', 'loop': true}">
+			<div id="typed-strings3">
+				<span>{{Text1}}</span>
+				<p>{{Text2}}</p>
+				<p>{{Text3}}</p>
+			</div>
+			<span id="typed3"></span>
+		</div>
+	</div>
+</section>
+{{/equal }}

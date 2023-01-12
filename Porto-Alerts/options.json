@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "Title": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "textarea"
+    },
+    "btn1Text": {
+      "type": "text"
+    },
+    "btn2Text": {
+      "type": "text"
+    }
+  }
+}

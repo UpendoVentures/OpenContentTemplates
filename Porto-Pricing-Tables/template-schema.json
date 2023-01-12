@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {  
+        "PricingTableStyle": {
+            "title": "Pricing Table Style",
+            "type": "string",
+            "enum": [
+                "",
+                "princig-table-flat"
+            ],
+            "default": ""
+        },
+        "PricingTableSize": {
+            "title": "Pricing Table Size",
+            "type": "string",
+            "enum": [
+                "",
+                "pricing-table-sm"
+            ],
+            "default": ""
+        }
+    }
+}

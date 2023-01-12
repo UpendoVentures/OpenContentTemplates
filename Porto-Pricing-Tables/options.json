@@ -1,0 +1,48 @@
+{
+    "fields": {
+      "ModuleTitle": {
+        "type": "text"
+      },
+      "Items": {
+        "type": "array",
+        "items": {
+            "Title": {
+              "type": "text"
+            },
+            "Description": {
+              "type": "text"
+            },
+            "Price": {
+                "type": "text"
+            },
+            "ActionButtonText":{
+                "type": "text"
+            },
+            "MostPopular": {
+              "type": "checkbox",
+              "label": "Most Popular:",
+              "rightLabel": "Set as most popular?",
+              "removeDefaultNone": true
+            },
+            "ShowPopularRibbon": {
+              "type": "checkbox",
+              "label": "Popular Ribbon:",
+              "rightLabel": "Show Popular Ribbon?",
+              "removeDefaultNone": true,
+              "dependencies": {
+                  "MostPopular": true
+              }
+            },            
+            "Features": 
+            {
+              "type": "array",
+              "items": {
+                "FeatureDescriptionText": {
+                  "type": "wysihtml"
+                }
+              }
+            }  
+         }
+      }
+    }  
+  }

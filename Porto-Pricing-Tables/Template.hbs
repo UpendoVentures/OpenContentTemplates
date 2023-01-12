@@ -1,0 +1,40 @@
+<div class="pricing-table{{#if Settings.PricingTableStyle}} {{Settings.PricingTableStyle}}{{/if}}
+{{#if Settings.PricingTableSize}} {{Settings.PricingTableSize}}{{/if}}">
+    <div class="row">  
+        {{#each Items}}      
+        <div class="{{#equal @root.Settings.PricingTableSize "pricing-table-sm"}}
+            col-md-2
+            {{else}}
+            col-md-3 col-sm-6
+            {{/equal}}
+            {{#if MostPopular}} center{{/if}}">
+            <div class="plan {{#if MostPopular}} most-popular{{/if}}">
+                {{#ifand MostPopular ShowPopularRibbon}}
+                    <div class="plan-ribbon-wrapper">
+                        <div class="plan-ribbon">Popular</div> 
+                    </div>
+                {{/ifand}}
+                <h3>
+                    {{Title}}
+                    {{#if Description}}<em class="desc">{{Description}}</em>{{/if}}
+                    <span>${{Price}}</span>                                     
+                </h3>
+                <a class="btn btn-lg 
+                {{#if MostPopular}}
+                btn-primary
+                {{else}}
+                btn-default
+                {{/if}}" href="#">{{ActionButtonText}}</a>
+                {{#equal @root.Settings.PricingTableSize "pricing-table-sm"}}
+                {{else}}
+                    <ul>
+                        {{#each Features}}
+                        <li>{{FeatureDescriptionText}}</li>                    
+                        {{/each}}
+                    </ul>
+                {{/equal}}
+            </div>
+        </div>   
+        {{/each}}     
+    </div>
+</div>

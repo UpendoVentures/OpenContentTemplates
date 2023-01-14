@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "ModalTitle": {
+      "type": "text"
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Item": {
+            "type": "text"
+          },
+          "DataType": {
+            "type": "select",
+            "sort": false,
+            "optionLabels": [
+              "text",
+              "email",
+              "url",
+              "textarea"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

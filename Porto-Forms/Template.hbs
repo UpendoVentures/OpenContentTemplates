@@ -1,0 +1,22 @@
+<div type="post">
+	{{#each Items}}
+            <div class="form-group">
+                <div class="row">
+                {{#each FormGroup}}
+                	    {{#equal DataType "textarea"}}
+                            <div class="{{GridWidth}}"><label for="{{Item}}">Your {{Item}} *</label> 
+			                    <textarea maxlength="5000" rows="{{Rows}}" class="form-control" name="{{Item}}" id="{{Item}}" ></textarea>
+		                    </div>
+                        {{else}}
+                            <div class="{{GridWidth}}"> <label for="{{Item}}">Your {{Item}} *</label> 
+				                <input type="{{DataType}}" maxlength="100" class="form-control" name="{{Item}}" id="{{Item}}" /> 
+			                </div>
+	                    {{/equal}}
+                {{/each}}
+                </div>
+            </div>
+	{{/each}}
+    <div class="row">
+        <div class="col-md-12"> <input type="submit" value="{{ButtonText}}" class="btn {{Settings.ButtonColor}} btn-lg" data-loading-text="Loading..." /> </div>
+    </div>
+</div>

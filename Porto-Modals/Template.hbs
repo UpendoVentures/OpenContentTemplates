@@ -1,0 +1,21 @@
+<button class="btn {{Settings.ButtonColor}} {{#equal Settings.StyleModal "defaultModal"}}btn-lg{{/equal}}" data-toggle="modal" data-target="#{{Settings.StyleModal}}">
+	{{ButtonText}}
+</button>
+<div class="modal {{#equal Settings.StyleModal "noAnimModal"}}{{else}}fade{{/equal}}" id="{{Settings.StyleModal}}" tabindex="-1" role="dialog"{{#equal Settings.StyleModal "noAnimModal"}}{{else}}aria-labelledby="{{Settings.StyleModal}}Label"{{/equal}}  aria-hidden="true">
+	<div class="modal-dialog {{#equal Settings.StyleModal "largeModal"}}modal-lg{{/equal}} {{#equal Settings.StyleModal "smallModal"}}modal-sm{{/equal}}">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="{{Settings.StyleModal}}Label">{{ModalTitle}}</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				 {{#each Items}}
+                    <p>{{Item}}</p>
+                {{/each}}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

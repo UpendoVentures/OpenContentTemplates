@@ -1,0 +1,102 @@
+{{#if Settings.FullWidth}}
+<div class="owl-carousel full-width" data-plugin-options="{'items': 5, 'loop': false, 'nav': true, 'dots': false}">
+	{{#each Items}}
+	<div>
+		<a href="{{Image}}">
+			<div class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+				<span class="thumb-info-wrapper">
+					<img alt="Project-Image-1" src="{{Image}}" class="img-fluid" />
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">{{FullWidthProjectTitle}}</span>
+						<span class="thumb-info-type">{{FullWidthProjectType}}</span>
+					</span>
+					<span class="thumb-info-action-icon"> <em class="fas fa-link"></em> </span>
+				</span>
+			</div>
+			<span class="btn-text-indent">Single Project</span>
+		</a>
+	</div>
+	 {{/each}}
+</div>
+{{else}}
+{{#if Settings.InsideText}}
+<div class="row">
+	<div class="col-md-12">
+		<p>{{InnerTopText}}</p>
+		<div class="owl-carousel nav-inside pull-left mr-lg mb-sm" style="width: 250px;" data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut','autoplay': {{#if Settings.Autoplay}} true {{else}} false {{/if}},
+           'autoplayTimeout': {{Settings.AutoplayTimeout}} }">
+		   {{#each Items}}
+			<div>
+				<img alt="Project-Image-1" class="img-fluid rounded" src="{{Image}}" />
+			</div>
+			{{/each}}
+		</div>
+		{{#each ItemsInnerText}}
+		<p>{{Text}}</p>
+		{{/each}}
+	</div>
+</div>
+{{else}}
+{{#if Settings.HoverStyle}}
+<div class="event pt-md">
+  <div class="row">
+    <div class="col-md-12">
+      <div
+        class="owl-carousel owl-theme custom-dots-style-1 custom-dots-color-primary"
+        data-plugin-options="{'items': 4, 'margin': 0, 'loop': false}"
+      >
+	  {{#each Items}}
+        <div class="carousel-logo-item background-color-light">
+          <div class="carousel-logo-pannel carousel-logo-pb center">
+            <img
+              src="{{Image}}"
+              class="img-fluid"
+              alt="logo-1"
+            />
+          </div>
+          <div
+            class="carousel-logo-pannel carousel-logo-hover pt-xlg pl-md pr-md pb-sm"
+          >
+            <div class="mb-lg">
+              <img
+                src="{{Image}}"
+                class="img-fluid"
+                alt="logo-1"
+              />
+            </div>
+            <p class="carousel-logo-description font-weight-normal">
+            {{HoverStyleText}}
+            </p>
+          </div>
+        </div>
+		{{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+<div
+  class="owl-carousel {{Settings.Navigation}} {{#if Settings.RoundedNav}} rounded-nav {{/if}}"
+  data-plugin-options="{'items': {{Settings.NumberOfItems}}, 'margin': 10, 'loop': {{#if Settings.Loop}} true {{else}} false {{/if}}, 
+   'nav': true, 'dots': false, 'autoplay': {{#if Settings.Autoplay}} true {{else}} false {{/if}},
+   'autoplayTimeout': {{Settings.AutoplayTimeout}} }"
+>
+  {{#each Items}}
+  <div class="center mb-lg">
+        <img alt="Image" class="img-fluid rounded" src="{{Image}}" />
+		{{#if ../Settings.ShowData}}
+		<h4 class="mt-md mb-none">{{FullName}}</h4>
+		<p class="mb-none">{{Ocupation}}</p>
+		<span class="thumb-info-social-icons mt-sm pb-none">
+			{{#each SocialMedia}}
+			<a href="{{Url}}"><em class="{{Icon}}"></em> <span>{{Name}}</span> </a>
+			{{/each}}
+		</span>
+		{{/if}}
+	</div>
+  {{/each}}
+</div>
+
+{{/if}}
+{{/if}}
+{{/if}}

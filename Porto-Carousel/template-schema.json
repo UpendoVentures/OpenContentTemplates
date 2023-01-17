@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "NumberOfItems": {
+      "title": "Number Of Items",
+      "type": "select",
+      "enum": ["1", "4"]
+    },
+    "Navigation": {
+      "title": "Navigation",
+      "type": "select",
+      "enum": ["stage-margin", "show-nav-hover", "show-nav-title", "nav-bottom"]
+    },
+    "FullWidth": {
+      "title": "FullWidth",
+      "type": "boolean"
+    },
+    "InsideText": {
+      "title": "InsideText",
+      "type": "boolean"
+    },
+    "HoverStyle": {
+      "title": "HoverStyle",
+      "type": "boolean"
+    },
+    "ShowData": {
+      "title": "ShowData",
+      "type": "boolean"
+    },
+    "RoundedNav": {
+      "title": "RoundedNav",
+      "type": "boolean"
+    },
+    "Loop": {
+      "title": "Loop",
+      "type": "boolean"
+    },
+    "Autoplay": {
+      "title": "Autoplay",
+      "type": "boolean"
+    },
+    "RoundedCircle": {
+      "title": "RoundedCircle",
+      "type": "boolean"
+    },
+    "AutoplayTimeout": {
+      "title": "Autoplay Timeout",
+      "type": "text"
+    }
+  }
+}

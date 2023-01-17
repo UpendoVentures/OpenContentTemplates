@@ -1,0 +1,89 @@
+{{#if Settings.Parallax}}
+<section class="parallax section section-text-light section-parallax section-center mt-none mb-none" data-image-src="{{ParallaxImage}}" data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="owl-carousel nav-bottom rounded-nav"  data-plugin-options="{'items': 1, 'autoplay': {{#if Settings.Autoplay}} true {{else}} false {{/if}},
+          'autoplayTimeout': {{Settings.AutoplayTimeout}} }">
+					{{#each Items}}
+          <div class="row">
+						<div class="col-md-12">
+             <div class="testimonial {{../Settings.Color}} {{../Settings.Style}}">
+								<div class="testimonial-author">
+									 <img alt="Image" src="{{Image}}" class="img-fluid {{#if ../Settings.RoundedCircle}} rounded-circle {{else}} '' {{/if}}"/>
+								</div>
+								<blockquote>
+									<p>{{Content}}</p>
+								<div class="testimonial-author">
+									<p><strong>{{Fullname}}</strong><span>{{Text}} &amp; {{Text1}}</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+           {{/each}} 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{else}}
+{{#if Settings.MultipleItems}}
+<div class="row mb-xlg">
+	<div class="col-md-4">
+		<div class="testimonial testimonial-style-5">
+			<blockquote>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes"</p>
+			</blockquote>
+			<div class="testimonial-arrow-down"></div>
+			<div class="testimonial-author">
+				<p><strong>John Smith</strong><span>CEO &amp; Founder</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="testimonial testimonial-style-5">
+			<blockquote>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes"</p>
+			</blockquote>
+			<div class="testimonial-arrow-down"></div>
+			<div class="testimonial-author">
+				<p><strong>John Smith</strong><span>CEO &amp; Founder</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="testimonial testimonial-style-5">
+			<blockquote>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes"</p>
+			</blockquote>
+			<div class="testimonial-arrow-down"></div>
+			<div class="testimonial-author">
+				<p><strong>John Smith</strong><span>CEO &amp; Founder</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+{{else}}
+  <div
+  class="owl-carousel"
+  data-plugin-options="{'items': 1, 'autoplay': {{#if Settings.Autoplay}} true {{else}} false {{/if}},
+   'autoplayTimeout': {{Settings.AutoplayTimeout}} }"
+>
+   {{#each Items}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="testimonial {{../Settings.Color}} {{../Settings.Style}}">
+        <blockquote>
+          <p>{{Content}}</p>
+        </blockquote>
+        <div class="testimonial-arrow-down"></div>
+        <div class="testimonial-author">
+          <img alt="Image" src="{{Image}}" class="img-fluid {{#if ../Settings.RoundedCircle}} rounded-circle {{else}} '' {{/if}}"/>
+            <p><strong>{{Fullname}}</strong><span>{{Text}} &amp; {{Text1}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}} 
+{{/if}}
+{{/if}}

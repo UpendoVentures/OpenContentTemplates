@@ -1,0 +1,58 @@
+{
+  "fields": {
+    "InnerTopText": {
+      "type": "textarea"
+    },
+    "ItemsInnerText": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Text": {
+            "type": "textarea"
+          }
+        }
+      }
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Image": {
+            "type": "image"
+          },
+          "HoverStyleText": {
+            "type": "text"
+          },
+          "FullName": {
+            "type": "text"
+          },
+          "Ocupation": {
+            "type": "text"
+          },
+          "SocialMedia": {
+            "type": "array",
+            "items": {
+              "fields": {
+                "Name": {
+                  "type": "text"
+                },
+                "Url": {
+                  "type": "text"
+                },
+                "Icon": {
+                  "type": "text"
+                }
+              }
+            }
+          },
+          "FullWidthProjectTitle": {
+            "type": "text"
+          },
+          "FullWidthProjectType": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}

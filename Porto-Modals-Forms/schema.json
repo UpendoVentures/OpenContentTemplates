@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "ModalTitle": {
+      "type": "string",
+      "title": "Modal Title (required)",
+      "required": true
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Item": {
+            "type": "string",
+            "title": "Item Title  (required)",
+            "required": true
+          },
+          "DataType": {
+            "type": "string",
+            "title": "DataType",
+            "enum": [
+              "text",
+              "email",
+              "url",
+              "textarea"
+            ],
+            "default": "text",
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}

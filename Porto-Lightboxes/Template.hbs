@@ -1,0 +1,47 @@
+{{#equal Settings.SHOW "Single-Image"}}
+<div class="row">
+  <div class="col-md-3">
+    <a
+      class="{{#if Settings.DEFAULT_WITH_BORDER}} img-thumbnail {{/if}} {{#if Settings.HOVER_EFFECT}} img-thumbnail-hover-icon {{/if}} lightbox d-block"
+      href="{{SingleImage}}"
+      data-plugin-options="{'type':'image'}"
+    >
+      <img class="img-fluid" src="{{SingleImage}}" alt="Project Image" />
+      {{#if Settings.WITH_ICON}}
+      <span class="zoom"><em class="fas fa-search"></em></span>
+      {{/if}}
+      <span class="btn-text-indent">Lightbox</span>
+    </a>
+  </div>
+</div>
+{{/equal}}
+{{#equal Settings.SHOW "Image-Gallery"}}
+<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {{#if ../Settings.ZOOM}} {'enabled': true, 'duration': 300} {{else}} {'enabled': false, 'duration': 300} {{/if}} }">
+	{{#each ImageGallery}}
+  <a class="{{#if ../Settings.DEFAULT_WITH_BORDER}} img-thumbnail {{/if}} {{#if ../Settings.HOVER_EFFECT}} img-thumbnail-hover-icon {{/if}} d-inline-block mb-xs mr-xs" href="{{Image}}">
+		<img class="img-fluid" src="{{Image}}" alt="Project Image" width="110" height="110" />
+     {{#if ../Settings.WITH_ICON}}
+      <span class="zoom"><em class="fas fa-search"></em></span>
+      {{/if}}
+		<span class="btn-text-indent">Lightbox</span>
+	</a>
+  {{/each}}
+</div>
+{{/equal}}
+{{#equal Settings.SHOW "Image-GalleryCarousel"}}
+<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {{#if ../Settings.ZOOM}} {'enabled': true, 'duration': 300} {{else}} {'enabled': false, 'duration': 300} {{/if}} }">
+<div class="owl-carousel stage-margin" data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
+	{{#each ImageGallery}}
+  <div>
+  <a class="{{#if ../Settings.DEFAULT_WITH_BORDER}} img-thumbnail {{/if}} {{#if ../Settings.HOVER_EFFECT}} img-thumbnail-hover-icon {{/if}} d-inline-block mb-xs mr-xs" href="{{Image}}">
+		<img class="img-fluid" src="{{Image}}" alt="Project Image" width="110" height="110" />
+     {{#if ../Settings.WITH_ICON}}
+      <span class="zoom"><em class="fas fa-search"></em></span>
+      {{/if}}
+		<span class="btn-text-indent">Lightbox</span>
+	</a>
+  </div>
+  {{/each}}
+</div>
+</div>
+{{/equal}}

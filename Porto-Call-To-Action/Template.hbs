@@ -1,0 +1,71 @@
+{{#equal Style "Parallax"}}
+<section class="parallax section section-text-light section-parallax" data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax" data-image-src="{{ParallaxImage}}">
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="call-to-action-content">
+                        <h3>{{Heading}}</h3>
+                        <p>{{SubHeading}}</p>
+                    </div>
+                    <div class="call-to-action-btn">
+                        <a href="{{ButtonLink}}" target="_blank" class="btn btn-lg btn-primary">{{Button}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{{else}} 
+{{#equal Style "Small"}}
+<div class="row">
+<div class="col-md-4">
+{{/equal}}
+<section class="call-to-action 
+{{#equal Style "Default"}}{{/equal}} 
+{{#equal Style "WithBorders"}}{{WithBorders}}{{/equal}}
+{{#equal Style "Featured"}}{{Featured}}{{/equal}}
+{{#equal Style "Colors"}}{{Color}}{{/equal}}
+{{#equal Style "WithArrow"}}with-borders with-button-arrow{{/equal}}
+{{#equal Style "Animated"}}with-borders{{/equal}}
+{{#equal Style "ButtonCentered"}}with-borders button-centered{{/equal}}
+{{#equal Style "Small"}}{{Color}} button-centered{{/equal}}
+{{#equal Style "FullWidth"}}{{Color}}{{/equal}}
+{{#equal Style "Footer"}}call-to-action-default with-button-arrow call-to-action-in-footer{{/equal}}
+mb-xl" {{#equal Style "Animated"}}data-appear-animation="fadeIn"{{/equal}}>
+{{#equal Style "FullWidth"}}
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+{{/equal}}
+{{#equal Style "Footer"}}
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+{{/equal}}
+    <div class="call-to-action-content">
+        <h3>{{Heading}}</h3>
+        <p>{{SubHeading}}</p>
+    </div>
+    <div class="call-to-action-btn">
+        <a href="{{ButtonLink}}" target="_blank" class="btn btn-lg 
+        {{#equal Style "Colors"}} btn-default {{else}} {{#equal Style "Small"}} btn-default{{else}} {{#equal Style "FullWidth"}} btn-default{{else}} btn-primary{{/equal}}{{/equal}}{{/equal}}">{{Button}}</a>
+        {{#equal Style "WithArrow"}}<span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -12px;"></span>{{/equal}}
+        {{#equal Style "Footer"}}<span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -12px;"></span>{{/equal}}
+    </div>
+    {{#equal Style "FullWidth"}}
+            </div>
+        </div>
+    </div>
+{{/equal}}
+    {{#equal Style "Footer"}}
+            </div>
+        </div>
+    </div>
+{{/equal}}
+</section>
+{{#equal Style "Small"}}
+</div>
+</div>
+{{/equal}} 
+{{/equal}} 

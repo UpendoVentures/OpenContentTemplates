@@ -1,0 +1,129 @@
+{{#*inline "Divider"}}
+<div class="divider divider-small divider-small-center">
+    <hr />
+</div>
+{{/inline}}
+
+{{#*inline "IconBox"}}
+  <em class="{{#equal @root.Settings.IconBoxesType "Classic"}}icon-featured{{/equal}} {{Icon}}
+    {{#equal @root.Settings.FeaturedBoxesStyle "featured-boxes-flat"}}
+        {{else}}m-none{{/equal}}
+    {{#equal @root.Settings.IconPosition "left"}}
+        pull-left mr-lg
+    {{/equal}}
+  "></em>
+{{/inline}}
+
+{{#*inline "BoxContent"}}
+<div class="box-content">
+    {{#equal @root.Settings.ContentContainers "2"}}
+        <div class="row">
+            {{#equal @root.Settings.IconPosition "right"}}
+                <div class="col-md-9">
+                    <h2 class="{{#if @root.Settings.UppercaseTitle}}text-uppercase{{/if}}">{{Title}}</h2>
+                </div>
+                <div class="col-md-3">
+                    <div class="align-right">{{> IconBox}}</div>
+                </div>
+            {{else}}
+                <div class="col-md-12">
+                    {{> IconBox}}
+                    <h2 class="{{#if @root.Settings.UppercaseTitle}}text-uppercase{{/if}}">{{Title}}</h2>
+                </div>    
+            {{/equal}}    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>{{Content}}</p>
+                <button class="btn btn-lg btn-{{@root.Settings.Color}} mr-xs mb-lg" type="button">{{ButtonText}}</button>
+            </div>
+        </div>
+    {{else}}
+        {{#equal @root.Settings.ContentContainers "1"}} 
+        <div class="row">
+            <div class="col-md-12">
+        {{/equal}}               
+                {{> IconBox}}
+                <h2 class="mb-lg {{#if @root.Settings.UppercaseTitle}}text-uppercase{{/if}}">{{Title}}</h2>               
+                {{#if @root.Settings.AddTopDivider}}
+                    {{> Divider}}
+                {{/if}}
+                <p>{{Content}}</p>
+                {{#if @root.Settings.AddBottomDivider}}
+                    {{> Divider}}
+                {{/if}}
+                <button class="btn btn-{{@root.Settings.Color}} mr-xs mb-lg" type="button">{{ButtonText}}</button>
+        {{#equal @root.Settings.ContentContainers "1"}} 
+            </div>
+        </div>
+        {{/equal}} 
+    {{/equal}}                       
+</div>
+{{/inline}}
+
+{{#equal Settings.IconBoxesType "Classic"}}
+<div class="featured-boxes {{Settings.FeaturedBoxesStyle}}">
+    <div class="row">           
+        {{#each Items}}
+            {{#equal @root.Settings.DisplayAxis "horizontally"}}
+            <div class="col-md-3 col-sm-6">
+            {{/equal}} 
+                <div class="featured-box featured-box-{{@root.Settings.Color}}
+                 {{#equal @root.Settings.ContentContainers 2}}featured-box-text-left{{/equal}}
+                  {{#equal @root.Settings.FeaturedBoxesStyle "featured-boxes-flat"}}
+                    {{@root.Settings.FeaturedBoxEffectFlat}} 
+                  {{else}}
+                    {{@root.Settings.FeaturedBoxEffect}}
+                  {{/equal}}"
+                  {{#if @root.Settings.EnableAnimations}}
+                    data-appear-animation="{{@root.Settings.AnimationType}}" 
+                    data-appear-animation-delay="{{@root.Settings.AnimationDelay}}"    
+                  {{/if}}
+                  >
+                    {{> BoxContent}}
+                </div>
+            {{#equal @root.Settings.DisplayAxis "horizontally"}}
+            </div>
+            {{/equal}} 
+        {{/each}}             
+    </div>
+</div>
+{{else}}
+    {{#equal Settings.IconBoxesType "Simple"}}
+        <div class="row">
+        {{#each Items}}
+            <div class="col-md-3">        
+                <div class="feature-box 
+                {{@root.Settings.FeatureBoxStyle}} 
+                feature-box-{{@root.Settings.Color}} 
+                {{#if @root.Settings.ApplyReverseClass}}reverse{{/if}}"
+                {{#if @root.Settings.EnableAnimations}}
+                    data-appear-animation="{{@root.Settings.AnimationType}}" 
+                    data-appear-animation-delay="{{@root.Settings.AnimationDelay}}"    
+                {{/if}}
+                >
+                    <div class="feature-box-icon">{{> Iconbox}}</div>
+                    <div class="feature-box-info">
+                        <h4 class="mb-sm {{#if @root.Settings.UppercaseTitle}}text-uppercase{{/if}}">{{Title}}</h4>
+                        <p class="mb-lg">{{Content}}</p>
+                    </div>
+                </div>
+            </div>
+         {{/each}}
+         </div>
+    {{else}}         
+        <div class="featured-boxes-full {{Settings.FeatureBoxFullStyle}} row m-0">
+            {{#each Items}}
+            <div class="col-md-3">
+                <div class="featured-box-full featured-box-full-primary">
+                    {{> Iconbox}}
+                    <h4 class="{{#if @root.Settings.UppercaseTitle}}text-uppercase{{/if}}">{{Title}}</h4>
+                    <p>{{Content}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>         
+    {{/equal}}
+{{/equal}}
+
+

@@ -1,0 +1,16 @@
+{{#if Settings.ShowBorders}}<div class="google-map-borders">{{/if}}
+<div class="google-map mt-none mb-none" 
+     id="googlemap" 
+     data-google-api-key="{{Context.{{Context.GoogleApiKey}}"
+     data-lat="{{Latitud}}" 
+     data-lng="{{Longitud}}"
+     data-pan-control="{{Settings.panControl}}"
+     data-zoom-control="{{Settings.zoomControl}}"
+     data-map-type-control="{{Settings.mapTypeControl}}"
+     data-scale-control="{{Settings.scaleControl}}"
+     data-street-view-control="{{Settings.streetViewControl}}"
+     data-overview-map-control="{{Settings.overviewMapControl}}"
+     data-scroll-wheel="{{Settings.scrollwheel}}"
+     data-markers="{{#each Markers}}{{Address}}+{{Html}}+{{MarkerIcon}}{{#if @last}}{{else}}?{{/if}}{{/each}}">
+</div>
+{{#if Settings.ShowBorders}}</div>{{/if}}

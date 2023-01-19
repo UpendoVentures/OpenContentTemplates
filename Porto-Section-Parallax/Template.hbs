@@ -1,0 +1,82 @@
+{{#equal StyleType "HalfSection"}}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 p-none">
+			<section style="background-image: url('{{Image}}');" class="section section-text-light section-background section-center match-height">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12"> </div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="col-md-6 p-none">
+			<section class="section section-default pl-lg pr-lg match-height">
+				<div class="row">
+					<div class="col-md-12">
+						<h5>{{Heading}}</h5>
+						<p class="mb-none">
+							{{SubHeading}}
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+{{else}}
+{{#equal StyleType "HalfSectionParallax"}}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 p-none">
+			<section class="section section-primary pl-lg pr-lg match-height">
+				<div class="row">
+					<div class="col-md-12">
+						<h5>{{Heading}}</h5>
+						<p class="mb-none"> {{SubHeading}} </p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="col-md-6 p-none">
+			<section class="parallax section section-parallax match-height" data-plugin-parallax="parallax" data-image-src="{{Image}}"></section>
+		</div>
+	</div>
+</div>
+{{else}}
+<section class="
+{{#equal StyleType "Default"}}{{StyleDefault}}{{/equal}} 
+{{#equal StyleType "BackgroundSection"}}{{StyleBackground}}{{/equal}}
+{{#equal StyleType "ParallaxSection"}}{{StyleParallax}}{{/equal}}
+{{#equal StyleType "VideoSection"}}video section section-text-light section-video section-center{{/equal}}" 
+{{#equal StyleType "BackgroundSection"}}style="background-image: url('{{Image}}');"{{/equal}}
+{{#equal StyleType "VideoSection"}}data-plugin-options="{'posterType': 'jpg', 'position': '50% 50%', 'overlay': true}" data-plugin-video-background="{{VideoUrl}}" data-video-path="{{VideoUrl}}"{{/equal}} 
+{{#equal StyleType "ParallaxSection"}}data-image-src="{{Image}}" data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax"{{/equal}}>
+{{#equal StyleDefault "section section-default section-with-divider"}}
+    <div class="divider divider-solid divider-style-4">
+		<em class="fas fa-chevron-down"></em>
+	</div>
+{{/equal}}
+	<div class="container">
+		<div class="row">
+            {{#equal StyleType "VideoSection"}}
+            <div class="col-md-8 offset-md-2">
+            {{/equal}}
+            {{#equal StyleType "ParallaxSection"}}
+            <div class="col-md-8 offset-md-2">
+            {{/equal}}
+            {{#equal StyleType "BackgroundSection"}}
+			<div class="col-md-12">
+            {{/equal}}
+            {{#equal StyleType "Default"}}
+			<div class="col-md-12">
+            {{/equal}}
+				<h4 class="mb-none {{#if TextLight}}text-light{{/if}}">{{Heading}}</h4>
+				<p class="mb-none {{#if TextLight}}text-light{{/if}}">{{SubHeading}}</p>
+			</div>
+		</div>
+	</div>
+</section>
+{{/equal}}
+{{/equal}}
+{{/equal}}

@@ -1,0 +1,23 @@
+<table class="table
+{{#if Settings.Striped}}table-striped{{/if}}
+{{#if Settings.Bordered}}table-bordered{{/if}}
+{{#if Settings.HoverRows}}table-hover{{/if}}
+{{#if Settings.Condensed}}table-sm{{/if}}
+">
+    <thead>
+        <tr>
+            {{#each TableHeadTD}}
+             <td>{{TableHeadTDContent}}</td>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each TableBodyTR}}
+            <tr class="{{RowClass}}">
+                {{#each TableBodyTD}}
+                    <td>{{TableBodyTDContent}}</td>                
+                {{/each}}
+            </tr>
+        {{/each}}        
+    </tbody>
+</table>

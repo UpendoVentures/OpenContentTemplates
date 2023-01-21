@@ -1,0 +1,33 @@
+{{#each Sections}}
+  <{{Size}} class="mb-sm word-rotator-title">
+    {{Text}}
+    {{#equal Color "transparent"}}
+    <strong>
+      <span
+        class="word-rotate"
+        data-plugin-options="{'delay': 2000, 'animDelay': 300}"
+      >
+        <span class="word-rotate-items">
+          {{#each WordRotate}}
+            <span>{{Value}}</span>
+          {{/each}}
+        </span>
+      </span>
+      </strong>
+    {{else}}
+      <strong class="inverted {{Color}}">
+        <span
+          class="word-rotate"
+          data-plugin-options="{'delay': 2000, 'animDelay': 300}"
+        >
+          <span class="word-rotate-items">
+            {{#each WordRotate}}
+              <span>{{Value}}</span>
+            {{/each}}
+          </span>
+        </span>
+      </strong>
+    {{/equal}}
+    {{OtherText}}
+  </{{Size}}>
+{{/each}}

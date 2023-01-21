@@ -1,0 +1,45 @@
+{
+  "fields": {
+    "Sections": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Text": {
+            "type": "textarea"
+          },
+          "Class": {
+            "type": "select",
+            "sort": false,
+            "optionLabels": ["Drop Caps", "Drop Caps Style-2"]
+          },
+          "AlternativeFont": {
+            "type": "text"
+          },
+          "TextWidthColor": {
+            "type": "text"
+          },
+          "Color": {
+            "type": "select",
+            "sort": false,
+            "optionLabels": [
+              "muted",
+              "primary",
+              "success",
+              "info",
+              "warning",
+              "danger"
+            ]
+          },
+          "Size": {
+            "type": "select",
+            "sort": false,
+            "optionLabels": ["h1", "h2", "h3", "h4", "h5", "h6"]
+          },
+          "OtherText": {
+            "type": "textarea"
+          }
+        }
+      }
+    }
+  }
+}

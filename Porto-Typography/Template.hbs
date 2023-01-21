@@ -1,0 +1,17 @@
+{{#each Sections}}
+{{#equal Class "None"}}
+  <{{Size}} class="mb-sm word-rotator-title">
+     {{Text}}
+     <span class="{{Color}}">{{TextWidthColor}}</span>
+     <span class="alternative-font">{{AlternativeFont}}</span>
+     {{OtherText}}
+  </span>
+ {{else}}
+  <p class="{{Class}}">
+     {{Text}}
+     <span class="{{Color}}">{{TextWidthColor}}</span>
+      <span class="alternative-font">{{AlternativeFont}}</span>
+     {{OtherText}}
+  </p>
+   {{/equal}}
+{{/each}}

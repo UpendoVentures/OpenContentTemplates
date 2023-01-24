@@ -1,0 +1,175 @@
+{{#equal Style "Posts"}}
+  <div
+    class="owl-carousel show-nav-title top-border"
+    data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 3}, '1199': {'items': 3}}, 'items': 3, 'margin': 20, 'loop': false, 'nav': true, 'dots': false}"
+  >
+    {{#each Posts}}
+      <div class="recent-posts">
+        <article class="post">
+          {{#if Post.UseCarousel}}
+            <div
+              class="owl-carousel nav-inside pull-left mr-lg mb-sm"
+              data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+            >
+              {{#each Post.Images}}
+                <div
+                  class="owl-carousel nav-inside pull-left mr-lg mb-sm"
+                  data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+                >
+                  <img
+                    alt="Image"
+                    class="img-fluid rounded"
+                    src="{{Image}}"
+                    style="max-height:250px;min-height:250px;"
+                  />
+                </div>
+              {{/each}}
+            </div>
+          {{/if}}
+          <div class="date"><span class="day">{{Post.Day}}</span><span
+              class="month"
+            >{{Post.Month}}</span></div>
+          <h4><a href="{{Post.TitleLink}}">{{Post.Title}}</a></h4>
+          <p> {{Post.Content}}</p>
+          {{#if Post.UsePostMeta}}
+            <div class="post-meta">
+              <span><em class="fas fa-calendar-alt"></em>
+                {{Post.PostMeta.Date}}
+              </span>
+              <span><em class="fas fa-user"></em>
+                By
+                <a href="#">{{Post.PostMeta.FullName}}</a>
+              </span>
+              <span><em class="fas fa-tag"></em>
+                <a href="{{Post.PostMeta.NewsLink}}">News</a>
+              </span>
+            </div>
+          {{/if}}
+          <p>
+            <a class="read-more" href="{{Post.ContentLink}}">read more
+              <em class="fas fa-angle-right"></em></a>
+          </p>
+        </article>
+      </div>
+    {{/each}}
+  </div>
+{{/equal}}
+{{#equal Style "Church"}}
+  {{#equal ChurchsStyle "info"}}
+    {{#each Churchs}}
+      <div class="church">
+        <div
+          class="thumb-info custom-thumb-info custom-box-shadow thumb-info-hide-wrapper-bg custom-sm-margin-bottom-1"
+        >
+          <span class="thumb-info-wrapper">
+            <a href="#">
+              <img alt="Image" src="{{Image}}" class="img-fluid" />
+            </a>
+          </span>
+          <div class="thumb-info-caption">
+            <div class="custom-event-infos">
+              <ul>
+                <li><em class="fas fa-clock"></em> {{Time}}</li>
+                <li class="text-uppercase"><em
+                    class="fas fa-map-marker-alt"
+                  ></em>
+                  {{Location}}</li>
+              </ul>
+            </div>
+
+            <div class="thumb-info-caption-text">
+              <h4 class="font-weight-bold mb-sm"><a
+                  class="text-color-dark"
+                  href="#"
+                >{{Title}} </a></h4>
+
+              <p>{{Content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/equal}}
+  {{#equal ChurchsStyle "inverted"}}
+    {{#each Churchs}}
+      <div class="church">
+        <div class="custom-post-event">
+          <div class="post-event-date inverted center">
+            <span class="month text-uppercase text-color-light">{{Month}}</span>
+            <span class="day font-weight-bold text-color-light">{{Day}}</span>
+            <span class="year text-color-light">{{Year}}</span>
+          </div>
+          <div class="post-event-content custom-margin-1">
+            <div class="custom-event-infos">
+              <ul>
+                <li><em class="fas fa-clock"></em> {{Time}}</li>
+                <li class="text-uppercase"><em
+                    class="fas fa-map-marker-alt"
+                  ></em>
+                  {{Location}}</li>
+              </ul>
+            </div>
+            <h4 class="font-weight-bold"><a
+                class="text-color-dark"
+                href="#"
+              >{{Title}}</a></h4>
+            <p>{{Content}}</p>
+          </div>
+        </div>
+      </div>
+      <hr class="solid" />
+    {{/each}}
+    <p><a
+        class="btn btn-primary custom-btn-style-1 text-uppercase mt-md"
+        href="#"
+      >All Events</a></p>
+  {{/equal}}
+  {{#equal ChurchsStyle "blog"}}
+    <div class="row">
+      {{#each Churchs}}
+        <div class="col-md-4 col-sm-8 custom-sm-margin-bottom-1">
+          <div class="church custom-post-blog">
+            <div
+              class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg"
+            >
+              <div class="thumb-info-wrapper">
+                <a href="#">
+                  <img
+                    alt="church_post_img2"
+                    src="{{Image}}"
+                    class="img-fluid"
+                    style="max-height: 230px;"
+                  />
+                </a>
+              </div>
+              <div class="thumb-info-caption custom-box-shadow">
+                <div class="thumb-info-caption-text">
+                  <h4 class="font-weight-bold mb-lg">
+                    <a
+                      href="#"
+                      class="text-decoration-none custom-secondary-font text-color-dark"
+                    > {{Title}}</a>
+                  </h4>
+                  <p>{{Content}}</p>
+                </div>
+                <div class="custom-thumb-info-post-infos center">
+                  <ul>
+                    <li class="text-uppercase">
+                      <em class="far fa-calendar-alt"></em>
+                      {{Month}}
+                      {{Day}}
+                    </li>
+                    <li class="text-uppercase">
+                      <em class="fas fa-user"></em>
+                      {{FullName}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/equal}}
+{{/equal}}

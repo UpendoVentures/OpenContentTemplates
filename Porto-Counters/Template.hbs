@@ -1,0 +1,55 @@
+{{#equal Style 'Default'}}
+{{#unless WithBackground}}
+  <div class="{{Settings.Size}} {{#if WithBorders}}with-borders{{/if}}">
+    <div class="row">
+      {{#each Items}}
+        <div class="{{../Grid}}">
+          <div class="counter {{Item.Color}}">
+            <em class="{{Item.Icon}}"></em>
+            <strong>{{Item.DataPrefix}}</strong>
+            <strong
+              data-append="{{Item.DataAppend}}"
+              data-to="{{Item.DataTo}}" data-plugin-options="{'speed': {{Item.Speed}} }"
+            >{{Item.DataFrom}}</strong>
+            <label>{{Item.Text}}</label>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{/unless}}
+{{#if WithBackground}}
+  <section {{#equal Background 'parallax'}} class="parallax section section-text-light section-parallax section-center mt-none"
+  data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax" data-image-src="{{ParallaxImage}}"{{else}}
+  class="{{Background}}"{{/equal}}>
+    <div class="container">
+      <div class="counters {{#equal Background 'section section-default'}} counters-text-dark{{else}}counters-text-light{{/equal}} ">
+        <div class="row">
+          {{#each Items}}
+            <div class="{{../Grid}} col-sm-6">
+              <div class="counter {{Item.Color}}">
+                <em class="{{Item.Icon}}"></em>
+                <strong>{{Item.DataPrefix}}</strong>
+                <strong
+                  data-append="{{Item.DataAppend}}"
+                  data-to="{{Item.DataTo}}" data-plugin-options="{'speed': {{Item.Speed}} }"
+                >{{Item.DataFrom}}</strong>
+                <label>{{Item.Text}}</label>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+{{/if}}
+{{/equal}}
+{{#equal Style 'Inline'}}
+<div class="row">
+	<div class="col-md-12">
+		<p>{{Inline.FirstText}} <strong class="{{#if Inline.AlternativeFont}} alternative-font {{/if}}" data-to="{{Inline.DataTo}}" 
+    data-plugin-counter="DataCounter" data-plugin-options="{'speed': 3500}">{{Inline.DataFrom}}</strong> 
+    {{Inline.LastText}}</p>
+	</div>
+</div>
+{{/equal}}

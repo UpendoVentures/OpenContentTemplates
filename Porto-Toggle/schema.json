@@ -19,13 +19,9 @@
             "title": "Content"
           },
           "Active": {
-            "type": "array",
+            "type": "string",
             "title": "Open by Default?",
-            "enum": [
-              "false",
-              "true"
-            ],
-            "removeDefaultNone": true
+            "enum": []
           }
         }
       }

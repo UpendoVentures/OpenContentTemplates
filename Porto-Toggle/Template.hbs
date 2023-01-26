@@ -4,9 +4,11 @@
     {{#each Items}}
     <section class="toggle{{#equal Active "true"}} active{{/equal}}" id="toggle-{{../Context.ModuleId}}-{{@index}}">
         <button class="toggle-heading" type="button">{{Title}}</button>
-        {{#equal ../Settings.Faq "false"}}<div class="toggle-content">{{/equal}}
-            {{{Content}}}
-            {{#equal ../Settings.Faq "false"}}</div>{{/equal}}
+        {{#equal ../Settings.Faq "false"}}
+            <div class="toggle-content">{{{Content}}}</div>
+        {{else}}
+        <p>{{{Content}}}</p>
+        {{/equal}}
     </section>
     {{/each}}
 </div>

@@ -11,15 +11,13 @@
             "type": "text"
           },
           "Content": {
-            "type": "wysihtml"
+            "type": "textarea"
           },
           "Active": {
             "type": "radio",
-            "optionLabels": [
-              "False",
-              "True"
-            ],
-            "removeDefaultNone": true
+            "sort": false,
+            "optionLabels": [],
+            "vertical": false
           }
         }
       }

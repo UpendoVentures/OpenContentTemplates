@@ -19,13 +19,15 @@
         {
           "fieldname": "Content",
           "title": "Content",
-          "fieldtype": "wysihtml",
+          "fieldtype": "textarea",
           "advanced": false
         },
         {
           "fieldname": "Active",
           "title": "Open by Default?",
           "fieldtype": "radio",
+          "vertical": false,
+          "fieldoptions": [],
           "advanced": false
         }
       ],

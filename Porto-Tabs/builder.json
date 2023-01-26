@@ -26,8 +26,14 @@
           "fieldname": "Icon",
           "title": "Icon (optional)",
           "fieldtype": "text",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
           "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>",
-          "advanced": false
+          "multilanguage": false,
+          "index": false,
+          "position": "1col1",
+          "dependencies": []
         }
       ],
       "advanced": false

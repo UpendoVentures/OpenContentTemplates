@@ -1,21 +1,23 @@
 {
-    "fields": {
-      "ModuleTitle": {
-        "type": "text"
-      },
-      "Items": {
-        "type": "array",
-        "items": {
-            "ListItemText": {
-              "type": "wysihtml"
-            },
-            "Icon": {
-              "type": "text"
-            },
-            "SecondLevelItems": 
-            {
-              "type": "array",
-              "items": {
+  "fields": {
+    "ModuleTitle": {
+      "type": "text"
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "ListItemText": {
+            "type": "wysihtml"
+          },
+          "Icon": {
+            "type": "text",
+            "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>"
+          },
+          "SecondLevelItems": {
+            "type": "array",
+            "items": {
+              "fields": {
                 "SecondLevelListItemText": {
                   "type": "wysihtml"
                 },
@@ -23,8 +25,10 @@
                   "type": "text"
                 }
               }
-            }  
-         }
+            }
+          }
+        }
       }
-    }  
+    }
   }
+}

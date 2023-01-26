@@ -7,7 +7,7 @@
     },
     "Icon": {
       "type": "string",
-      "title": "Icon (optional)",
+      "title": "Icon (optional) - Example: fas fa-android",
       "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>"
     }
   }

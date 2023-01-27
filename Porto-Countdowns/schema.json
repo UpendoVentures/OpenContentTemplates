@@ -6,6 +6,10 @@
       "title": "DateTime (required)",
       "placeholder": "Use Format YYYY/MM/DD h:mm:ss",
       "required": true
+    },
+    "ParallaxImage": {
+      "type": "string",
+      "title": "Parallax Image (required if Countdowns Style is equal to \"Inside Parallax\" )"
     }
   }
 }

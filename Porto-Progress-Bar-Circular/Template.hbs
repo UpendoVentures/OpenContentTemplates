@@ -1,13 +1,13 @@
 <div class="circular-bar">
-			<div class="circular-bar-chart" data-percent="{{CompletedAmmount}}" 
-			data-plugin-options="{'size': '{{Settings.Size}}',
-								 'lineWidth': '{{Settings.lineWidth}}',
-								 'barColor': '#{{Settings.barColor}}',
-								 'trackColor': '#{{Settings.trackColor}}',
-								 {{#if Settings.scaleColor}}'scaleColor': '#{{Settings.scaleColor}}',{{/if}}
-								 'lineCap': '#{{Settings.lineCap}}' 
-								 }"
-			>
-				{{InnerContent}}
-			</div>
+  <div
+    class="circular-bar-chart"
+    data-percent="{{CompletedAmmount}}"
+    data-plugin-options="{ 'size': '{{Settings.Size}}','lineWidth': '{{Settings.lineWidth}}',
+	'barColor': '{{Settings.barColor}}','trackColor': '#{{Settings.trackColor}}',
+	 {{#if Settings.scaleColor}}'scaleColor': '#{{Settings.scaleColor}}',{{/if}}
+	'lineCap': '#{{Settings.lineCap}}'}"
+  >
+    <strong>{{InnerContent}}</strong>
+    <label>{{CompletedAmmount}}%</label>
+  </div>
 </div>

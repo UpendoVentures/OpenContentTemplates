@@ -12,6 +12,13 @@
       "index": false,
       "position": "1col1",
       "dependencies": []
+    },
+    {
+      "fieldname": "ParallaxImage",
+      "title": "Parallax Image (required if Countdowns Style is equal to \"Inside Parallax\" )",
+      "fieldtype": "image",
+      "imageoptions": {},
+      "advanced": false
     }
   ],
   "formtype": "object"

@@ -3,10 +3,20 @@
     <p>{{Content}}</p>
   </blockquote>
   <div class="testimonial-arrow-down"></div>
-  <div class="testimonial-author">
-    <div class="testimonial-author-thumbnail img-thumbnail">
-      <img alt="Image" src="{{Image}}" />
+  {{#equal Settings.Style "testimonial-style-5"}}
+    <div class="testimonial-author">
+      <p><strong>{{Fullname}}</strong><span>{{Text}} &amp; {{Text1}}</span></p>
     </div>
-    <p><strong>{{Fullname}}</strong><span>{{Text}} &amp; {{Text1}}</span></p>
-  </div>
+  {{else}}
+    <div class="testimonial-author">
+      {{#equal Settings.Style "testimonial-style-2"}}
+        <img alt="Client-2" src="{{Image}}" class="img-fluid rounded-circle" />
+      {{else}}
+        <div class="testimonial-author-thumbnail img-thumbnail">
+          <img alt="Image" src="{{Image}}" />
+        </div>
+      {{/equal}}
+      <p><strong>{{Fullname}}</strong><span>{{Text}} &amp; {{Text1}}</span></p>
+    </div>
+  {{/equal}}
 </div>

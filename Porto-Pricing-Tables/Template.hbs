@@ -1,3 +1,7 @@
+{{#equal Settings.PricingTableStyle 'Parallax'}}
+<section class="parallax section section-text-light section-parallax mt-none mb-none" data-image-src="{{ParallaxImage}}" data-plugin-options="{'speed': 1.5}" data-plugin-parallax="parallax">
+    <div class="container">
+{{/equal}}
 <div class="pricing-table{{#if Settings.PricingTableStyle}} {{Settings.PricingTableStyle}}{{/if}}
 {{#if Settings.PricingTableSize}} {{Settings.PricingTableSize}}{{/if}}">
     <div class="row">  
@@ -38,3 +42,7 @@
         {{/each}}     
     </div>
 </div>
+{{#equal Settings.PricingTableStyle 'Parallax'}}
+  </div>
+</section>
+{{/equal}}

@@ -42,13 +42,22 @@
                         </span>
                     </div>
                 </div>
-                <p class="mb-none pb-none">{{Title}}</p>
                 {{/equal}}
+                <p class="mb-none pb-none">{{Title}}</p>
                 {{/equal}}
                 {{#equal @root.Settings.TabMode "standard"}}
                 {{#if Icon }}<span class="{{Icon}}"></span> {{/if}}{{Title}}
                 {{/equal}}
             </a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/equal}}
+    {{#equal Settings.TabPosition "vertical"}}
+    <ul class="nav nav-tabs col-sm-3">
+        {{#each Items}}
+        <li class="nav-item active">
+            <a class="nav-link" href="#tab-{{../Context.ModuleId}}-{{@index}}" data-toggle="tab">{{Title}}</a>
         </li>
         {{/each}}
     </ul>

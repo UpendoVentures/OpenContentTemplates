@@ -6,6 +6,10 @@
     "Content": {
       "type": "textarea"
     },
+    "Icon": {
+      "type": "text",
+      "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>"
+    },
     "btn1Text": {
       "type": "text"
     },

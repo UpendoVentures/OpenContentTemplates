@@ -1,1 +1,24 @@
-<div class="{{Settings.CountdownsStyle}}" data-plugin-countdown data-plugin-options="{'date': '{{DateTime}}', 'numberClass': 'font-weight-extra-bold'}"></div>
+{{#equal Settings.CountdownsStyle "parallax"}}
+  <section
+    class="parallax section section-text-light section-parallax section-center mt-none"
+    data-plugin-options="{'speed': 1.5}"
+    data-plugin-parallax="parallax"
+    data-image-src="{{ParallaxImage}}"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"><div
+            class="countdown countdown-light"
+            data-plugin-countdown
+            data-plugin-options="{'date': '{{DateTime}}', 'numberClass': 'font-weight-extra-bold'}"
+          ></div></div>
+      </div>
+    </div>
+  </section>
+{{else}}
+  <div
+    class="{{Settings.CountdownsStyle}}"
+    data-plugin-countdown
+    data-plugin-options="{'date': '{{DateTime}}', 'numberClass': 'font-weight-extra-bold'}"
+  ></div>
+{{/equal}}

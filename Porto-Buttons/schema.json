@@ -3,8 +3,7 @@
   "properties": {
     "Button": {
       "type": "string",
-      "title": "Button Text (optional)",
-      "required": false
+      "title": "Button Text (required)"
     },
     "Icon": {
       "type": "string",

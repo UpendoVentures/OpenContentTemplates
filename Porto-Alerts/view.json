@@ -5,6 +5,7 @@
     "bindings": {
       "Title": "#pos_1_1",
       "Content": "#pos_1_1",
+      "Icon": "#pos_1_1",
       "btn1Text": "#pos_2_1",
       "btn2Text": "#pos_2_3"
     }

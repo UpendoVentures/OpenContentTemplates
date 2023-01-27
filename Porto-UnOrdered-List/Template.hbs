@@ -1,3 +1,11 @@
+{{#if Descriptionlists}}
+<dl>
+    {{#each ItemsDescription}}
+    <dt>{{Title}}</dt>
+    <dd>{{ListItemText}}</dd>
+    {{/each}}
+</dl>
+{{else}}
 <ul class="list list-icons {{Settings.IconsColor}} {{Settings.ListBorder}} {{Settings.IconStyle}} {{Settings.IconsSizes}} {{ Settings.IconsPosition}}">
     {{#each Items}}
     <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}" data-appear-animation-delay="{{@root.Settings.AnimationDelay}}"{{/if}}>
@@ -16,3 +24,4 @@
     </li>    
     {{/each}}
 </ul>   
+{{/if}}

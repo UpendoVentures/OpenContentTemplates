@@ -3,8 +3,16 @@
     "ModuleTitle": {
       "type": "text"
     },
+    "Descriptionlists": {
+      "type": "checkbox"
+    },
     "Items": {
       "type": "array",
+      "dependencies": {
+        "Descriptionlists": [
+          "false"
+        ]
+      },
       "items": {
         "fields": {
           "ListItemText": {
@@ -26,6 +34,24 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "ItemsDescription": {
+      "type": "array",
+      "dependencies": {
+        "Descriptionlists": [
+          "true"
+        ]
+      },
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "ListItemText": {
+            "type": "wysihtml"
           }
         }
       }

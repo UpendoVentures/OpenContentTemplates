@@ -5,8 +5,15 @@
       "type": "string",
       "title": "Module Title"
     },
+    "Descriptionlists": {
+      "type": "boolean",
+      "title": "Description lists"
+    },
     "Items": {
       "type": "array",
+      "dependencies": [
+        "Descriptionlists"
+      ],
       "items": {
         "type": "object",
         "properties": {
@@ -35,6 +42,27 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "ItemsDescription": {
+      "type": "array",
+      "title": "Items Description",
+      "dependencies": [
+        "Descriptionlists"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "ListItemText": {
+            "type": "string",
+            "title": "List Item Text",
+            "required": true
           }
         }
       }

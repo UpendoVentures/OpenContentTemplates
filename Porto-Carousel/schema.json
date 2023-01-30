@@ -71,6 +71,23 @@
           }
         }
       }
+    },
+    "Videos": {
+      "type": "array",
+      "title": "Videos",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "TextIndent": {
+            "type": "string",
+            "title": "Text Indent"
+          }
+        }
+      }
     }
   }
 }

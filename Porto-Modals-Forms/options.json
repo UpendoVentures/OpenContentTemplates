@@ -1,5 +1,8 @@
 {
   "fields": {
+    "ButtonTitle": {
+      "type": "text"
+    },
     "ModalTitle": {
       "type": "text"
     },

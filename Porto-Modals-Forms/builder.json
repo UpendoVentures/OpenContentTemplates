@@ -1,6 +1,12 @@
 {
   "formfields": [
     {
+      "fieldname": "ButtonTitle",
+      "title": "ButtonTitle",
+      "fieldtype": "text",
+      "advanced": false
+    },
+    {
       "fieldname": "ModalTitle",
       "title": "Modal Title (required)",
       "fieldtype": "text",

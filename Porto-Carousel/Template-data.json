@@ -6,5 +6,5 @@
   "Loop": "true",
   "Autoplay": "true",
   "AutoplayTimeout": "3000",
-  "FullWidth": "false"
+  "Style": "Default"
 }

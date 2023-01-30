@@ -1,6 +1,10 @@
 {
   "type": "object",
   "properties": {
+    "ButtonTitle": {
+      "type": "string",
+      "title": "ButtonTitle"
+    },
     "ModalTitle": {
       "type": "string",
       "title": "Modal Title (required)",

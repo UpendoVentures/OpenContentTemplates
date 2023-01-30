@@ -3,6 +3,7 @@
   "layout": {
     "template": "<div><div class=\"row\"><div class=\"col-md-12\" id=\"pos_1_1\"></div></div></div>",
     "bindings": {
+      "ButtonTitle": "#pos_1_1",
       "ModalTitle": "#pos_1_1",
       "Items": "#pos_1_1"
     }

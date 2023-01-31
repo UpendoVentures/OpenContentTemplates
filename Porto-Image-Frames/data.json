@@ -1,39 +1,36 @@
 {
-  "Groups": [
-    {
-      "Item": "websites"
-    },
-    {
-      "Item": "logos"
-    },
-    {
-      "Item": "brands"
-    }
-  ],
   "Items": [
     {
+      "HoverStyles": "Default",
+      "DefaultStyles": "img-thumbnail d-inline-block",
       "Image": "",
       "ProjectTitle": "Some title1",
       "ProjectType": "Some type1",
-      "Group": "websites"
+      "GridWidth": "col-md-3"
     },
     {
+      "HoverStyles": "Default",
+      "DefaultStyles": "img-thumbnail d-inline-block",
       "Image": "",
       "ProjectTitle": "Some title2",
       "ProjectType": "Some type2",
-      "Group": "websites"
+      "GridWidth": "col-md-3"
     },
     {
+      "HoverStyles": "Default",
+      "DefaultStyles": "img-thumbnail d-inline-block",
       "Image": "",
       "ProjectTitle": "Some title3",
       "ProjectType": "Some type3",
-      "Group": "logos"
+      "GridWidth": "col-md-3"
     },
     {
+      "HoverStyles": "Default",
+      "DefaultStyles": "img-thumbnail d-inline-block",
       "Image": "",
       "ProjectTitle": "Some title4",
       "ProjectType": "Some type4",
-      "Group": "brands"
+      "GridWidth": "col-md-3"
     }
   ]
 }

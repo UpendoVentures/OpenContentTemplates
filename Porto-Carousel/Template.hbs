@@ -1,4 +1,4 @@
-{{#if Settings.FullWidth}}
+{{#equal Settings.Style "FullWidth"}}
 <div class="owl-carousel full-width" data-plugin-options="{'items': 5, 'loop': false, 'nav': true, 'dots': false}">
 	{{#each Items}}
 	<div>
@@ -18,8 +18,8 @@
 	</div>
 	 {{/each}}
 </div>
-{{else}}
-{{#if Settings.InsideText}}
+{{/equal}}
+{{#equal Settings.Style "InsideText"}}
 <div class="row">
 	<div class="col-md-12">
 		<p>{{InnerTopText}}</p>
@@ -36,8 +36,8 @@
 		{{/each}}
 	</div>
 </div>
-{{else}}
-{{#if Settings.HoverStyle}}
+{{/equal}}
+{{#equal Settings.Style "HoverStyle"}}
 <div class="event pt-md">
   <div class="row">
     <div class="col-md-12">
@@ -74,7 +74,8 @@
     </div>
   </div>
 </div>
-{{else}}
+{{/equal}}
+{{#equal Settings.Style "Default"}}
 <div
   class="owl-carousel {{Settings.Navigation}} {{#if Settings.RoundedNav}} rounded-nav {{/if}}"
   data-plugin-options="{'items': {{Settings.NumberOfItems}}, 'margin': 10, 'loop': {{#if Settings.Loop}} true {{else}} false {{/if}}, 
@@ -96,7 +97,13 @@
 	</div>
   {{/each}}
 </div>
-
-{{/if}}
-{{/if}}
-{{/if}}
+{{/equal}}
+{{#equal Settings.Style "Videos"}}
+<div class="owl-carousel manual" id="videos">
+	{{#each Videos}}
+	<div class="item-video" data-merge="3">
+        <a class="owl-video" href="{{Url}}"> <span class="btn-text-indent">{{TextIndent}}</span> </a>
+    </div>
+	{{/each}}
+</div>
+{{/equal}}

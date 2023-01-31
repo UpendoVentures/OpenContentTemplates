@@ -40,7 +40,8 @@
                   "type": "text"
                 },
                 "Icon": {
-                  "type": "text"
+                  "type": "text",
+                  "helper": "Find values at: <a href=\\\"https://fontawesome.com/icons?d=gallery\\\" target=\\\"_blank\\\">FontAwesome</a>"
                 }
               }
             }
@@ -49,6 +50,19 @@
             "type": "text"
           },
           "FullWidthProjectType": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "Videos": {
+      "type": "array",
+      "items": {
+        "fields": {
+          "Url": {
+            "type": "text"
+          },
+          "TextIndent": {
             "type": "text"
           }
         }

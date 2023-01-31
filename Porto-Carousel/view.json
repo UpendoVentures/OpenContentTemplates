@@ -5,7 +5,8 @@
     "bindings": {
       "InnerTopText": "#pos_1_1",
       "ItemsInnerText": "#pos_1_1",
-      "Items": "#pos_1_1"
+      "Items": "#pos_1_1",
+      "Videos": "#pos_1_1"
     }
   }
 }

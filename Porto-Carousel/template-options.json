@@ -17,19 +17,16 @@
       ],
       "removeDefaultNone": true
     },
-    "FullWidth": {
-      "label": "Full Width",
-      "type": "checkbox",
-      "removeDefaultNone": true
-    },
-    "InsideText": {
-      "label": "Inside Text",
-      "type": "checkbox",
-      "removeDefaultNone": true
-    },
-    "HoverStyle": {
-      "label": "Hover Style",
-      "type": "checkbox",
+    "Style": {
+      "title": "Style",
+      "type": "select",
+      "optionLabels": [
+        "Default",
+        "FullWidth",
+        "InsideText",
+        "HoverStyle",
+        "Videos"
+      ],
       "removeDefaultNone": true
     },
     "ShowData": {

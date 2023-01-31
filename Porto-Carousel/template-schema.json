@@ -11,17 +11,10 @@
       "type": "select",
       "enum": ["stage-margin", "show-nav-hover", "show-nav-title", "nav-bottom"]
     },
-    "FullWidth": {
-      "title": "FullWidth",
-      "type": "boolean"
-    },
-    "InsideText": {
-      "title": "InsideText",
-      "type": "boolean"
-    },
-    "HoverStyle": {
-      "title": "HoverStyle",
-      "type": "boolean"
+    "Style": {
+      "title": "Style",
+      "type": "select",
+      "enum": ["Default", "FullWidth", "InsideText", "HoverStyle", "Videos"]
     },
     "ShowData": {
       "title": "ShowData",

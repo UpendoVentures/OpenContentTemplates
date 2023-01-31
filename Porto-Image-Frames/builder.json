@@ -39,6 +39,10 @@
               "text": "Centered Info"
             },
             {
+              "value": "Hide Info Hover",
+              "text": "Hide Info Hover"
+            },
+            {
               "value": "FadeIn",
               "text": "FadeIn"
             },
@@ -54,10 +58,6 @@
           "title": "Default Styles",
           "fieldtype": "select",
           "fieldoptions": [
-            {
-              "value": "rounded",
-              "text": "rounded"
-            },
             {
               "value": "rounded-circle",
               "text": "rounded-circle"
@@ -243,7 +243,14 @@
               "fieldname": "Name",
               "title": "Name",
               "fieldtype": "text",
-              "advanced": false
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "placeholder": "facebook",
+              "multilanguage": false,
+              "index": false,
+              "position": "1col1",
+              "dependencies": []
             },
             {
               "fieldname": "URL",
@@ -395,7 +402,17 @@
               "text": "Bottom Info Dark"
             }
           ],
-          "advanced": false
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "index": false,
+          "position": "1col1",
+          "dependencies": [
+            {
+              "fieldname": "HoverStyles",
+              "values": "Centered Icons,Icons Colors"
+            }
+          ]
         },
         {
           "fieldname": "NoBorders",

@@ -18,6 +18,7 @@
               "Centered Icons",
               "Icons Colors",
               "thumb-info-centered-info",
+              "Hide Info Hover",
               "FadeIn",
               "Animation Style"
             ]
@@ -26,7 +27,6 @@
             "type": "string",
             "title": "Default Styles",
             "enum": [
-              "rounded",
               "rounded-circle",
               "img-thumbnail d-inline-block"
             ]
@@ -184,6 +184,9 @@
             "enum": [
               "thumb-info-bottom-info",
               "thumb-info-bottom-info thumb-info-bottom-info-dark"
+            ],
+            "dependencies": [
+              "HoverStyles"
             ]
           },
           "NoBorders": {

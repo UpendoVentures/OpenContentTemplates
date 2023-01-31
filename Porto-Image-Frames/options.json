@@ -15,6 +15,7 @@
               "Centered Icons",
               "Icons Colors",
               "Centered Info",
+              "Hide Info Hover",
               "FadeIn",
               "Animation Style"
             ]
@@ -23,7 +24,6 @@
             "type": "select",
             "sort": false,
             "optionLabels": [
-              "rounded",
               "rounded-circle",
               "img-thumbnail d-inline-block"
             ]
@@ -105,7 +105,8 @@
             "items": {
               "fields": {
                 "Name": {
-                  "type": "text"
+                  "type": "text",
+                  "placeholder": "facebook"
                 },
                 "URL": {
                   "type": "text"
@@ -179,7 +180,13 @@
             "optionLabels": [
               "Bottom Info",
               "Bottom Info Dark"
-            ]
+            ],
+            "dependencies": {
+              "HoverStyles": [
+                "Centered Icons",
+                "Icons Colors"
+              ]
+            }
           },
           "NoBorders": {
             "type": "checkbox"

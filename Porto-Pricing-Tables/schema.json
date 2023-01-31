@@ -1,64 +1,59 @@
 {
-    "type": "object",
-    "properties": {
-      "ModuleTitle": {
-        "type": "string",
-        "title": "Module Title"
-      },
-      "Items": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "Title": {
-              "type": "string",
-              "title": "Title (required)",
-              "required": true
-            },
-            "Description": {
-              "type": "string",
-              "title": "Description (optional)"
-            },
-            "Price": {
-                "type": "number",
-                "title": "Price (required)",
-                "required": true,
-                "minimum": 0
-            }, 
-            "ActionButtonText": {
-              "type": "string",
-              "title": "Action Button Text (required)",
-              "required": true
-            },
-            "MostPopular": {    
-                "title": "Most Popular",
-                "type": "boolean",
-                "default": false        
-            },
-            "ShowPopularRibbon": {
-                "title": "Show Popular Ribbon",    
-                "type": "boolean",
-                "default": false        
-            },
-            "Features":{
-              "type": "array",
-               "items": {
-                "type": "object",
-                "properties": {
-                  "FeatureDescriptionText": {
-                    "type": "string",
-                    "title": "Feature Description (required)",
-                    "required": true
-                  }
-                }
-               }
-            }
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "type": "string",
+      "title": "Module Title"
+    },
+    "ParallaxImage": {
+      "type": "string",
+      "title": "Parallax Image"
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "title": "Title (required)",
+            "required": true
           },
-          "dependencies": {        
-              "ShowPopularRibbon": ["MostPopular"]
+          "Description": {
+            "type": "string",
+            "title": "Description (optional)"
+          },
+          "Price": {
+            "type": "string",
+            "title": "Price (required)",
+            "required": true
+          },
+          "ActionButtonText": {
+            "type": "string",
+            "title": "Action Button Text (required)",
+            "required": true
+          },
+          "MostPopular": {
+            "type": "boolean"
+          },
+          "ShowPopularRibbon": {
+            "type": "boolean"
+          },
+          "Features": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "FeatureDescriptionText": {
+                  "type": "string",
+                  "title": "Feature Description (required)",
+                  "required": true
+                }
+              }
+            }
           }
         }
       }
     }
   }
-  
+}

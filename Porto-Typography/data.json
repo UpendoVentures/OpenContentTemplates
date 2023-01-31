@@ -2,7 +2,7 @@
   "Sections": [
     {
       "Text": "Some text",
-      "Class": "None",
+      "Class": "Default",
       "AlternativeFont": "Alternative Font",
       "TextWidthColor": "Text Width Color",
       "Color": "text-primary",

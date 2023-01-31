@@ -10,6 +10,10 @@
       "title": "Content Text (required)",
       "required": true
     },
+    "Icon": {
+      "type": "string",
+      "title": "Icon"
+    },
     "btn1Text": {
       "type": "string",
       "title": "Button Text 1"

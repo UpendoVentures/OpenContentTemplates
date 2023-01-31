@@ -25,6 +25,19 @@
       "dependencies": []
     },
     {
+      "fieldname": "Icon",
+      "title": "Icon",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "helper": "Find values at: <a href=\"https://fontawesome.com/icons?d=gallery\" target=\"_blank\">FontAwesome</a>",
+      "multilanguage": false,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
       "fieldname": "btn1Text",
       "title": "Button Text 1",
       "fieldtype": "text",

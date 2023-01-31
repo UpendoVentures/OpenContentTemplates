@@ -22,7 +22,7 @@
     {{#equal HoverStyles "thumb-info-lighten"}}
       <div class="{{GridWidth}}">
         <a href="#">
-          <div class="thumb-info {{#if NoBorders}} thumb-info-no-borders {{/if}}">
+          <div class="thumb-info thumb-info-lighten {{#if NoBorders}} thumb-info-no-borders {{/if}}">
             <span class="thumb-info-wrapper">
               <img
                 alt="Project-Image"
@@ -74,18 +74,10 @@
               src="{{Image}}"
               class="img-fluid {{DefaultStyles}}"
             />
-            {{#equal Bottom "thumb-info-bottom-info-dark"}}
               <span class="thumb-info-title">
                 <span class="thumb-info-inner">{{ProjectTitle}}</span>
                 <span class="thumb-info-type">{{ProjectType}}</span>
               </span>
-            {{/equal}}
-            {{#equal Bottom "thumb-info-bottom-info"}}
-              <span class="thumb-info-title">
-                <span class="thumb-info-inner">{{ProjectTitle}}</span>
-                <span class="thumb-info-type">{{ProjectType}}</span>
-              </span>
-            {{/equal}}
             <span class="thumb-info-action">
               {{#each Icons}}
               <a href="{{href}}">
@@ -102,7 +94,7 @@
     {{/equal}}
     {{#equal HoverStyles "Icons Colors"}}
       <div class="{{GridWidth}}">
-        <div class="thumb-info thumb-info-centered-icons {{#if NoBorders}} thumb-info-no-borders {{/if}}">
+        <div class="thumb-info thumb-info-centered-icons {{Bottom}} {{#if NoBorders}} thumb-info-no-borders {{/if}}">
           <span class="thumb-info-wrapper">
             <img
               alt="Project-Image"
@@ -123,6 +115,37 @@
         </div>
       </div>
     {{/equal}}
+    {{#equal HoverStyles "Hide Info Hover"}}
+    <div class="{{GridWidth}}">
+      <a href="#">
+        <div class="thumb-info thumb-info-centered-info thumb-info-hide-info-hover">
+          <span class="thumb-info-wrapper">
+            <img alt="Project-Image" src="{{Image}}" class="img-fluid" />
+            <span class="thumb-info-title">
+             <span class="thumb-info-inner">{{ProjectTitle}}</span>
+						<span class="thumb-info-type">{{ProjectType}}</span>
+            </span>
+          </span>
+        </div> <span class="btn-text-indent">Single Project</span>
+      </a>
+    </div>
+    {{/equal}}
+     {{#equal HoverStyles "thumb-info-centered-info"}}
+      <div class="{{GridWidth}}">
+     <a href="#">
+			<div class="thumb-info thumb-info-centered-info">
+				<span class="thumb-info-wrapper">
+					<img alt="Project-Image" src="{{Image}}" class="img-fluid" />
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">{{ProjectTitle}}</span>
+						<span class="thumb-info-type">{{ProjectType}}</span>
+					</span>
+					<span class="thumb-info-action-icon"> <em class="fas fa-link"></em> </span>
+				</span>
+			</div> <span class="btn-text-indent">Single Project</span>
+		</a>
+    </div>
+     {{/equal}}
     {{#equal HoverStyles "FadeIn"}}
     <div class="{{GridWidth}}">
 		<div class="appear-animation restaurant" data-appear-animation="fadeIn" data-appear-animation-delay="0">

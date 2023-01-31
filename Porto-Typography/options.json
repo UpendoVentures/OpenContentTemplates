@@ -10,7 +10,8 @@
           "Class": {
             "type": "select",
             "sort": false,
-            "optionLabels": ["Drop Caps", "Drop Caps Style-2"]
+            "optionLabels": ["Default", "Drop Caps", "Drop Caps Style-2"],
+            "removeDefaultNone": true
           },
           "AlternativeFont": {
             "type": "text"

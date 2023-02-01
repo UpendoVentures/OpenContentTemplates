@@ -190,6 +190,72 @@
       ]
     },
     {
+      "fieldname": "GridWidth",
+      "title": "GridWidth",
+      "fieldtype": "select",
+      "fieldoptions": [
+        {
+          "value": "col-md-1",
+          "text": "col-md-1"
+        },
+        {
+          "value": "col-md-2",
+          "text": "col-md-2"
+        },
+        {
+          "value": "col-md-3",
+          "text": "col-md-3"
+        },
+        {
+          "value": "col-md-4",
+          "text": "col-md-4"
+        },
+        {
+          "value": "col-md-5",
+          "text": "col-md-5"
+        },
+        {
+          "value": "col-md-6",
+          "text": "col-md-6"
+        },
+        {
+          "value": "col-md-7",
+          "text": "col-md-7"
+        },
+        {
+          "value": "col-md-8",
+          "text": "col-md-8"
+        },
+        {
+          "value": "col-md-9",
+          "text": "col-md-9"
+        },
+        {
+          "value": "col-md-10",
+          "text": "col-md-10"
+        },
+        {
+          "value": "col-md-11",
+          "text": "col-md-11"
+        },
+        {
+          "value": "col-md-12",
+          "text": "col-md-12"
+        }
+      ],
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "index": false,
+      "position": "1col1",
+      "dependencies": [
+        {
+          "fieldname": "ChurchsStyle",
+          "values": "info"
+        }
+      ]
+    },
+    {
       "fieldname": "Churchs",
       "title": "Churchs",
       "fieldtype": "array",

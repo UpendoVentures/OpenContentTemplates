@@ -56,39 +56,41 @@
 {{/equal}}
 {{#equal Style "Church"}}
   {{#equal ChurchsStyle "info"}}
-    {{#each Churchs}}
-      <div class="church">
-        <div
-          class="thumb-info custom-thumb-info custom-box-shadow thumb-info-hide-wrapper-bg custom-sm-margin-bottom-1"
-        >
-          <span class="thumb-info-wrapper">
-            <a href="#">
-              <img alt="Image" src="{{Image}}" class="img-fluid" />
-            </a>
-          </span>
-          <div class="thumb-info-caption">
-            <div class="custom-event-infos">
-              <ul>
-                <li><em class="fas fa-clock"></em> {{Time}}</li>
-                <li class="text-uppercase"><em
-                    class="fas fa-map-marker-alt"
-                  ></em>
-                  {{Location}}</li>
-              </ul>
-            </div>
+    <div class="row">
+      {{#each Churchs}}
+        <div class="church {{@root.GridWidth}}">
+          <div
+            class="thumb-info custom-thumb-info custom-box-shadow thumb-info-hide-wrapper-bg custom-sm-margin-bottom-1"
+          >
+            <span class="thumb-info-wrapper">
+              <a href="#">
+                <img alt="Image" src="{{Image}}" class="img-fluid" />
+              </a>
+            </span>
+            <div class="thumb-info-caption">
+              <div class="custom-event-infos">
+                <ul>
+                  <li><em class="fas fa-clock"></em> {{Time}}</li>
+                  <li class="text-uppercase"><em
+                      class="fas fa-map-marker-alt"
+                    ></em>
+                    {{Location}}</li>
+                </ul>
+              </div>
 
-            <div class="thumb-info-caption-text">
-              <h4 class="font-weight-bold mb-sm"><a
-                  class="text-color-dark"
-                  href="#"
-                >{{Title}} </a></h4>
+              <div class="thumb-info-caption-text">
+                <h4 class="font-weight-bold mb-sm"><a
+                    class="text-color-dark"
+                    href="#"
+                  >{{Title}} </a></h4>
 
-              <p>{{Content}}</p>
+                <p>{{Content}}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
   {{/equal}}
   {{#equal ChurchsStyle "inverted"}}
     {{#each Churchs}}

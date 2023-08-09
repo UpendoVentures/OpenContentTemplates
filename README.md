@@ -11,7 +11,7 @@ Learn more about DNN CMS at [the official DNN community website](https://dncommu
 3. Go into Edit Mode in DNN with a superuser account.  
 4. Choose `Edit Global Settings` from the actions menu (one of the last menu items).
 5. Find the `Github Templates Repository` setting.
-6. Add a comma, then copy/paste the following value:  `,UpendoVentures/OpenContentTemplates`.  (Leave out the period.)
+6. Now, copy/paste the following value:  `,UpendoVentures/OpenContentTemplates`.  (Leave out the period, but include the comma.)
 7. Save your update.
 
 Now, when you choose to create a new template, all of these templates are available in addition to any others you might already have on your site.  

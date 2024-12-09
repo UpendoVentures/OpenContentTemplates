@@ -1,4 +1,4 @@
-# OpenContentTemplates for OpenContent on DNN
+# OpenContentTemplates (Handlebars-based__) for OpenContent on DNN
 
 These are templates that we commonly use for various projects.
 

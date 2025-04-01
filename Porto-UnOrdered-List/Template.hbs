@@ -1,27 +1,76 @@
-{{#if Descriptionlists}}
+{{#equal Type "Description"}}
 <dl>
     {{#each ItemsDescription}}
     <dt>{{Title}}</dt>
     <dd>{{ListItemText}}</dd>
     {{/each}}
 </dl>
-{{else}}
-<ul class="list list-icons {{Settings.IconsColor}} {{Settings.ListBorder}} {{Settings.IconStyle}} {{Settings.IconsSizes}} {{ Settings.IconsPosition}}">
+{{/equal}}
+
+{{#equal Type "Unordered"}}
+<ul>
     {{#each Items}}
-    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}" data-appear-animation-delay="{{@root.Settings.AnimationDelay}}"{{/if}}>
+    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}"
+        data-appear-animation-delay="{{@root.Settings.AnimationDelay}}" {{/if}}>
         {{#if Icon}}<em class="{{Icon}}"></em>{{/if}} {{ListItemText}}
-        
-        {{#if SecondLevelListItems}}
-            <ul class="list list-icons {{@root.Settings.IconsColor}} {{@root.Settings.ListBorder}} {{@root.Settings.IconStyle}} {{@root.Settings.IconsSizes}} {{ @root.Settings.IconsPosition}}">
-                {{#each SecondLevelListItems}}
-                    <li>
-                        {{#if SecondLevelListItemIcon}}<em class="{{SecondLevelListItemIcon}}"></em>{{/if}} {{SecondLevelListItemText}}
-                    </li>
-                {{/each}}
-            </ul>
+
+        {{#if SecondLevelItems}}
+        <ul>
+            {{#each SecondLevelItems}}
+            <li>
+                {{#if SecondLevelListItemIcon}}<em class="{{SecondLevelListItemIcon}}"></em>{{/if}}
+                {{SecondLevelListItemText}}
+            </li>
+            {{/each}}
+        </ul>
         {{/if}}
-        
-    </li>    
+    </li>
     {{/each}}
-</ul>   
-{{/if}}
+</ul>
+{{/equal}}
+
+{{#equal Type "Unstyled"}}
+<ul class="list-unstyled">
+    {{#each Items}}
+    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}"
+        data-appear-animation-delay="{{@root.Settings.AnimationDelay}}" {{/if}}>
+        {{#if Icon}}<em class="{{Icon}}"></em>{{/if}} {{ListItemText}}
+
+        {{#if SecondLevelItems}}
+        <ul class="list-unstyled">
+            {{#each SecondLevelItems}}
+            <li>
+                {{#if SecondLevelListItemIcon}}<em class="{{SecondLevelListItemIcon}}"></em>{{/if}}
+                {{SecondLevelListItemText}}
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>
+{{/equal}}
+
+{{#equal Type "Icons"}}
+<ul
+    class="list list-icons {{Settings.IconsColor}} {{Settings.ListBorder}} {{Settings.IconStyle}} {{Settings.IconsSizes}} {{Settings.IconsPosition}}">
+    {{#each Items}}
+    <li {{#if @root.Settings.EnableAnimations}}data-appear-animation="{{@root.Settings.AnimationType}}"
+        data-appear-animation-delay="{{@root.Settings.AnimationDelay}}" {{/if}}>
+        {{#if Icon}}<em class="{{Icon}}"></em>{{/if}} {{ListItemText}}
+
+        {{#if SecondLevelItems}}
+        <ul
+            class="list list-icons {{@root.Settings.IconsColor}} {{@root.Settings.ListBorder}} {{@root.Settings.IconStyle}} {{@root.Settings.IconsSizes}} {{@root.Settings.IconsPosition}}">
+            {{#each SecondLevelItems}}
+            <li>
+                {{#if SecondLevelListItemIcon}}<em class="{{SecondLevelListItemIcon}}"></em>{{/if}}
+                {{SecondLevelListItemText}}
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>
+{{/equal}}

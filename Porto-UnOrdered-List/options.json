@@ -3,16 +3,18 @@
     "ModuleTitle": {
       "type": "text"
     },
-    "Descriptionlists": {
-      "type": "checkbox"
+    "Type": {
+      "type": "select",
+      "sort": false,
+      "optionLabels": [
+        "Unordered",
+        "Unstyled",
+        "Description",
+        "Icons"
+      ]
     },
     "Items": {
       "type": "array",
-      "dependencies": {
-        "Descriptionlists": [
-          "false"
-        ]
-      },
       "items": {
         "fields": {
           "ListItemText": {
@@ -41,8 +43,8 @@
     "ItemsDescription": {
       "type": "array",
       "dependencies": {
-        "Descriptionlists": [
-          "true"
+        "Type": [
+          "Description"
         ]
       },
       "items": {

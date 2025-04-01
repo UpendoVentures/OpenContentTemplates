@@ -1,20 +1,31 @@
 {
-    "ModuleTitle": "Lists",
-    "Items": [
-      {
-        "ListItemText": "List Item 1",
-        "Icon": "fas fa-check",
-        "SecondLevelItems": []
-      },
-      {
-        "ListItemText": "List Item 2",
-        "Icon": "fas fa-check",
-        "SecondLevelItems": []
-      },
-      {      
-        "ListItemText": "List Item 3",
-        "Icon": "",
-        "SecondLevelItems": []
-      }
-    ]
-  }
+  "ModuleTitle": "Lists",
+  "Type": "Unordered",
+  "Items": [
+    {
+      "ListItemText": "List Item 1",
+      "Icon": "fas fa-check",
+      "SecondLevelItems": [
+        {
+          "SecondLevelListItemText": "Sub Item 1.1",
+          "SecondLevelListItemIcon": "fas fa-cloud-download-alt"
+        },
+        {
+          "SecondLevelListItemText": "Sub Item 1.2",
+          "SecondLevelListItemIcon": "fas fa-cloud-download-alt"
+        }
+      ]
+    },
+    {
+      "ListItemText": "List Item 2",
+      "Icon": "fas fa-check",
+      "SecondLevelItems": []
+    },
+    {
+      "ListItemText": "List Item 3",
+      "Icon": "",
+      "SecondLevelItems": []
+    }
+  ],
+  "ItemsDescription": []
+}

@@ -7,10 +7,34 @@
       "advanced": false
     },
     {
-      "fieldname": "Descriptionlists",
-      "title": "Description lists",
-      "fieldtype": "checkbox",
-      "advanced": false
+      "fieldname": "Type",
+      "title": "Type",
+      "fieldtype": "select",
+      "fieldoptions": [
+        {
+          "value": "Unordered",
+          "text": "Unordered"
+        },
+        {
+          "value": "Unstyled",
+          "text": "Unstyled"
+        },
+        {
+          "value": "Description",
+          "text": "Description"
+        },
+        {
+          "value": "Icons",
+          "text": "Icons"
+        }
+      ],
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "default": "Unordered",
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
     },
     {
       "fieldname": "Items",
@@ -43,23 +67,18 @@
         },
         {
           "fieldname": "SecondLevelItems",
+          "title": "Second Level List Item",
           "fieldtype": "array",
           "subfields": [
             {
               "fieldname": "SecondLevelListItemText",
-              "title": "List Item Text (required)",
+              "title": "Second Level List Item Text (Requerido)",
               "fieldtype": "wysihtml",
-              "advanced": true,
-              "required": true,
-              "hidden": false,
-              "multilanguage": false,
-              "index": false,
-              "position": "1col1",
-              "dependencies": []
+              "advanced": false
             },
             {
               "fieldname": "SecondLevelListItemIcon",
-              "title": "Icon (optional)",
+              "title": "Second Level Icon (optional)",
               "fieldtype": "text",
               "advanced": false
             }
@@ -67,16 +86,7 @@
           "advanced": false
         }
       ],
-      "advanced": true,
-      "required": false,
-      "hidden": false,
-      "position": "1col1",
-      "dependencies": [
-        {
-          "fieldname": "Descriptionlists",
-          "values": "false"
-        }
-      ]
+      "advanced": false
     },
     {
       "fieldname": "ItemsDescription",
@@ -108,8 +118,8 @@
       "position": "1col1",
       "dependencies": [
         {
-          "fieldname": "Descriptionlists",
-          "values": "true"
+          "fieldname": "Type",
+          "values": "Description"
         }
       ]
     }

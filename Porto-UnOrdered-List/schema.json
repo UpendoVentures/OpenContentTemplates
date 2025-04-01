@@ -5,15 +5,20 @@
       "type": "string",
       "title": "Module Title"
     },
-    "Descriptionlists": {
-      "type": "boolean",
-      "title": "Description lists"
+    "Type": {
+      "type": "string",
+      "title": "Type",
+      "enum": [
+        "Unordered",
+        "Unstyled",
+        "Description",
+        "Icons"
+      ],
+      "default": "Unordered"
     },
     "Items": {
       "type": "array",
-      "dependencies": [
-        "Descriptionlists"
-      ],
+      "title": "Items (for Unordered, Unstyled, or Icons)",
       "items": {
         "type": "object",
         "properties": {
@@ -28,17 +33,17 @@
           },
           "SecondLevelItems": {
             "type": "array",
+            "title": "Second Level List Item",
             "items": {
               "type": "object",
               "properties": {
                 "SecondLevelListItemText": {
                   "type": "string",
-                  "title": "List Item Text (required)",
-                  "required": true
+                  "title": "Second Level List Item Text (Requerido)"
                 },
                 "SecondLevelListItemIcon": {
                   "type": "string",
-                  "title": "Icon (optional)"
+                  "title": "Second Level Icon (optional)"
                 }
               }
             }
@@ -48,9 +53,9 @@
     },
     "ItemsDescription": {
       "type": "array",
-      "title": "Items Description",
+      "title": "Items (for Description type)",
       "dependencies": [
-        "Descriptionlists"
+        "Type"
       ],
       "items": {
         "type": "object",
